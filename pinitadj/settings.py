@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'Index',
     'moderador',
     'login',
+    'Fundacion',
 ]
 
 MIDDLEWARE = [
