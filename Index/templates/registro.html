@@ -1,0 +1,170 @@
+{% load static%}
+<!DOCTYPE html >
+<html> 
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="initial-scale=1.0"/>
+    <title>Fundacion Pinita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Raleway:wght@100;300;400;600;800&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{%static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{%static 'css/tablet.css' %}" media="screen and (min-width: 768px)"/>
+    <link rel="stylesheet" href="{%static 'css/desktop.css' %}" media="screen and (min-width: 1024px)"/>
+    <link rel="stylesheet" href="{%static 'css/menu.css' %}"/>
+    <link rel="stylesheet" href="{%static 'css/form.css' %}"/>
+    <link rel="shortcut icon" href="{% static 'css/images/favIcon.png' %}"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </head>
+  <body> 
+    <header>
+      <nav class="menu">
+        <section class="menu__container"><img class="menu__logo" src="{% static 'css/images/icono/logotipo.svg' %}"  alt="logotipo"/>
+            <ul class="menu__links"> 
+                <li class="menu__item"> <a class="menu__link" href="index.html">Inicio</a></li>
+                <li class="menu__item menu__item-show"><a class="menu__link" href="#">Fundacion <img class="menu__arrow" src="{% static 'css/images/icono/chevronderecha.svg' %}" alt="flecha sub"/></a>
+                  <ul class="menu__nesting">
+                    <li class="menu__inside"><a class="menu__link menu__link-inside" href="Fundacion.html">Quienes somos</a></li>
+                    <li class="menu__inside"><a class="menu__link menu__link-inside" href="contacto.html">Contacto   </a></li>
+                  </ul>
+                </li>
+                <li class="menu__item"> <a class="menu__link" href="formlogin.html">Login</a></li>
+                <li class="menu__item"> <a class="menu__link" href="Registro.html">Registro</a></li>
+              </ul>
+              <div class="menu__hamburger"> <img class="menu__img" src="{% static 'css/images/icono/menu.svg' %}" alt="icono de menu"/></div>
+            </section>
+          </nav>
+    </header>
+    <div class="contentRegistro">
+      <div class="contentRegistro__box">
+        <div class="contentRegistro__box__usuario"> 
+          <p>Registro
+            <div class="contentRegistro__box__usuario__formulario">
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Moderador:</label>
+                <input class="form-control" id="formGroupExampleInput" type="text" placeholder="Ingrese Moderador"/>
+                <p>Ingrese el nombre del moderador de 8 caracteres con el que podrá iniciar sesión. El nombre del moderador no debe contener solo números.</p>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Nombre Completo:</label>
+                <input class="form-control" id="formGroupExampleInput2" type="text" placeholder="Ingrese su nombre completo"/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Fecha Nacimiento:</label>
+                <input class="form-control" id="formGroupExampleInput3" type="date" placeholder=""/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Nacionalidad:</label>
+                <input class="form-control" id="formGroupExampleInput4" type="text" placeholder="Ingrese su nacionalidad"/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Domicilio:</label>
+                <input class="form-control" id="formGroupExampleInput5" type="text" placeholder="Ingrese su domicilio"/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Telefono:</label>
+                <input class="form-control" id="formGroupExampleInput6" type="number" placeholder="Ingrese su telefono a 10 digitos sin espacio"/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Email:</label>
+                <input class="form-control" id="formGroupExampleInput4" type="text" placeholder="Ingrese su correo electronico"/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Observaciones:</label>
+                <textarea class="form-control" id="floatingTextarea7" placeholder="Las observaciones deben contener maximo 180 caracteres" style="height: 100px"></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Password:</label>
+                <label class="form-label2" for="formGroupExampleInput2">La contraseña debe contener al menos una mayuscula, una minuscula, un caracter especial y un numero. Debe tener entre 8 y 12 caracteres.</label>
+                <input class="form-control" id="formGroupExampleInput8" type="password" placeholder="Password asta 12 caracteres"/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="formGroupExampleInput2">Confirmar Password:</label>
+                <input class="form-control" id="formGroupExampleInput9" type="password" placeholder="Confirmar Password"/>
+              </div>
+              <div class="boton"> <a href="formlogin.html"> 
+                  <button class="btn btn-warning btn-lg" type="button">Registrar</button></a></div>
+              <div class="boton-azul">
+                <button class="btn btn-warning btn-lg" type="button">Cancelar</button>
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+        <div class="footer__header">
+          <div class="footer__header__box">
+            <div class="footer__header__box__phone">
+              <div class="footer__header-icon"><img src="{% static 'css/images/icono/telefono.svg' %}" alt="icono de teléfono fijo"/></div>
+              <div class="footer__header__phone-num"> 
+                <p>442 219-76-51 <br/>444 257-52-88</p>
+              </div>
+            </div>
+            <div class="footer__header__box__cellphone">
+              <div class="footer__header-icon"> <img src="{% static 'css/images/icono/telefono-inteligente.svg' %}" alt="ícono de un celular"/></div>
+              <div class="footer__header__cellphone-num"> 
+                <p>449-110-68 42</p>
+              </div>
+            </div>
+            <div class="footer__header__box__email"> 
+              <div class="footer__header-icon"><img src="{% static 'css/images/icono/correo.svg' %}" alt="ícono de un email"/></div>
+              <div class="footer__header__email-txt"> 
+                <p>contacto@fundacionpinita.org</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__box">
+          <div class="footer__box__body">
+            <div class="footer__box__body-logo"><img src="{% static 'css/images/icono/logotipo.svg'%}" alt="logotipo de Pinita"/></div>
+            <div class="footer__box__body-links">
+              <h2>Enlaces Directos</h2>
+              <ul> 
+                <li><a href="/">Inicio</a></li>
+                <li><a href="Fundacion.html">Fundacion Pinita </a></li>
+                <li><a href="Registro.html">Registro</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="privacidad.html">Aviso de Privacidad </a></li>
+              </ul>
+            </div>
+            <div class="footer__box__body-address"> <img src="{% static 'css/images/icono/maps.svg' %}" alt="ícono de ubicación"/>
+              <p>Calle Belice 211 col.</p>
+              <p>Santa Elena, CP</p>
+              <p>20230</p>
+              <p>Aguascalieintes,Ags</p>
+            </div>
+            <div class="footer__box__body-schedule">
+              <h2>HORARIOS DE ATENCIÓN</h2>
+              <div class="footer__box__body-schedule-hours">
+                <p>Lunes a Viernes: </p>
+                <p>9:00am - 6:00 pm</p>
+                <p>Sábado: </p>
+                <p>9:00am - 2:00 pm</p>
+                <p>Domingo: </p>
+                <p>Cerrado</p>
+              </div>
+            </div>
+            <div class="footer__box__body-socialmedia">
+              <div class="footer__box__body-socialmedia__icon">
+                <h2>SÍGUENOS</h2><a href="https://www.facebook.com/FundacionPinita"> <img src="{% static 'css/images/icono/facebook.svg' %}" alt="Ícono de facebook en footer"/></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__foot"> 
+            <div class="rights">
+              <p>FUNDACION PINITA 2023</p>
+            </div>
+            <p class="divisor"><strong>|</strong></p>
+            <div class="link__jmc"> <a href="https://jmcsoluciones.com" target="_blank">Desarrollado por <strong>JMC Soluciones</strong>  </a></div>
+          </div>
+        </div>
+      </footer>
+    <script src="js/app-dist.js"></script>
+  </body>
+</html>

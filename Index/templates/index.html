@@ -1,0 +1,315 @@
+{% load static%}
+<!DOCTYPE html >
+<html> 
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="initial-scale=1.0"/>
+    <title>Fundacion Pinita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Raleway:wght@100;300;400;600;800&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{%static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{%static 'css/tablet.css' %}" media="screen and (min-width: 768px)"/>
+    <link rel="stylesheet" href="{%static 'css/desktop.css' %}" media="screen and (min-width: 1024px)"/>
+    <link rel="stylesheet" href="{%static 'css/menu.css' %}"/>
+    <link rel="stylesheet" href="{%static 'css/form.css' %}"/>
+    <link rel="shortcut icon" href="{% static 'css/images/favIcon.png' %}"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </head>
+  <body> 
+    <header>
+      <nav class="menu">
+        <section class="menu__container"><img class="menu__logo" src="{% static 'css/images/icono/logotipo.svg' %}" alt="logotipo"/>
+          <ul class="menu__links"> 
+            <li class="menu__item"> <a class="menu__link" href="index.html">Inicio</a></li>
+            <li class="menu__item menu__item-show"><a class="menu__link" href="#">Fundacion <img class="menu__arrow" src="{% static 'css/images/icono/chevronderecha.svg' %}" alt="flecha sub"/></a>
+              <ul class="menu__nesting">
+                <li class="menu__inside"><a class="menu__link menu__link-inside" href="Fundacion.html">Quienes somos</a></li>
+                <li class="menu__inside"><a class="menu__link menu__link-inside" href="contacto.html">Contacto   </a></li>
+              </ul>
+            </li>
+            <li class="menu__item"> <a class="menu__link" href="formlogin.html">Login</a></li>
+            <li class="menu__item"> <a class="menu__link" href="Registro.html">Registro</a></li>
+          </ul>
+          <div class="menu__hamburger"> <img class="menu__img" src="{% static 'css/images/icono/menu.svg' %}" alt="icono de menu"/></div>
+        </section>
+      </nav>
+    </header>
+    <div class="content"> 
+      <div class="content__section-slide">
+        <section class="content__slides carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <picture class="carousel-item__img">
+                <source media="(min-width:1110px)" srcset="{% static 'css/images/Desktop/desktopSlides_1-1920x466.jpg' %}"/>
+                <source media="(min-width:768px)" srcset="{% static 'css/images/Tablet/tabletSlides_2-1110x466.jpg' %}"/><img class="d-block w-100" src="{% static 'css/images/Mobile/mobileSlide_2-722x1048.jpg' %}" alt="Imagen de inicio"/>
+              </picture>
+              <div class="slideContent"> 
+                <p>Fundación</p>
+                <p>Pinita </p>
+                <p>Más que sonrisas </p>
+                <div class="slideContent__link"> <a href="Fundacion.html" target="blank">Nuestra Fundación </a><img src="{% static 'css/images/icono/flecha_blanca.svg' %}" alt="logo de flecha"/></div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <picture class="carousel-item__img">
+                <source media="(min-width:1110px)" srcset="{% static 'css/images/Desktop/desktopSlides_2-1920x466.jpg'%}"/>
+                <source media="(min-width:768px)" srcset="{% static 'css/images/Tablet/tabletSlides_1-1110x466.jpg' %}"/><img class="d-block w-100" src="{% static 'css/images/Mobile/mobileSlide_1-722x1048.jpg' %}" alt="niña de verde"/>
+              </picture>
+              <div class="slideContent">
+                <div class="slideContent__box"><img src="{% static 'css/images/icono/logotipo.svg' %}" alt="logo pinita"/></div>
+              </div>
+            </div>
+            <button class="carousel-control-prev hidden" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev"><span class="carousel-control-prev-icon hidden" aria-hidden="true"></span><span class="visually-hidden hidden">Previous</span></button>
+            <button class="carousel-control-next hidden" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next"><span class="carousel-control-next-icon hidden" aria-hidden="true"></span><span class="visually-hidden hidden">Next</span></button>
+          </div>
+        </section>
+      </div>
+      <div class="content__section-nuestrafundacion">
+        <div class="content__section-nuestrafundacion-txt"> 
+          <p>"Cuando ayudamos a nuestro prójimo de corazón, es como <strong>sanamos errores, tristezas, y encontramos un nuevo camino</strong>"</p><a href="Fundacion.html" target="blank">Conoce nuestra fundación <img src="{% static 'css/images/icono/flecha_amarilla.svg' %}" alt="logo de flecha"/></a>
+        </div>
+        <div class="content__section-nuestrafundacion-motivacion"> 
+          <div class="content__section-nuestrafundacion-motivacion-text">
+            <p>A veces no es sólo brillar, también es <strong>ayudar abrillar a alguien más</strong></p>
+          </div>
+        </div>
+        <div class="content__section-nuestrafundacion-ayuda"> 
+          <p>"ayudar a otro es un privilegio, agradece la oportunidad de hacerlo"</p>
+        </div>
+        <div class="content__section-nuestrafundacion-imgcafe"> 
+          <div class="content__section-nuestrafundacion-imgcafe-color">
+            <p>"Tus acciones demuestran <strong>de qué está echo tu corazón</strong>"</p>
+          </div>
+          <div class="content__section-nuestrafundacion-imgcafe-cuadro"> 
+            <p>La gratitud lo cambia <strong>TODO</strong></p>
+          </div>
+          <div class="content__section-nuestrafundacion-texto"></div>
+        </div>
+        <div class="content__section-nuestrafundacion-programas"> 
+          <p><strong>programas sociales</strong></p>
+          <p>Apoyamos a los niños, jóvenes y adultos que se encuentran en mala situación </p>
+        </div>
+        <div class="content__section-nuestrafundacion-circulo">
+          <div class="content__section-nuestrafundacion-circulo-item" id="itemProg1">
+            <div class="content__section-nuestrafundacion-circulo-item-txt">
+              <p>Comedor</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svga' %}" alt="logo de flecha"/></button>
+            </div>
+          </div>
+          <div class="modal fade modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalComedorLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Entrega de <br/> <strong>alimentos a <br/> clientes</strong></h1>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <p>En pocas cosas se puede invertir mejor nuestro tiempo y esfuerzo que repartiendo sonrisas acompañadas de un alimento caliente a quien más lo necesita.<img class="imagen-redonda" src="{% static 'css/images/Mobile/itemsCircle_2-600x600.jpg' %}" alt="comedor viejito" srcset=""/></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__section-nuestrafundacion-circulo-item" id="itemProg2">
+            <div class="content__section-nuestrafundacion-circulo-item-txt">
+              <p>Ayuda Psicologica</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#Pscologia">Ver mas                            
+                <img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></button>
+            </div>
+          </div>
+          <div class="modal fade modal fade" id="Pscologia" tabindex="-1" aria-labelledby="modalComedorLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="PscologiaLabel">Ayuda <br/> <strong>psicológica</strong></h1>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <p>Servicio de atención psicológica gratuita. <br/><br/>“La buena vida es un proceso, no un estado de ser. Se trata de una dirección, no un destino”<img src="{% static 'css/images/Mobile/itemsCircle_3-600x600.jpg' %}" alt="Psicologia" srcset=""/></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel2">Resgistro </h5>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body mensaje">Registro exitoso!</div>
+                <div class="modal-footer"> 
+                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__section-nuestrafundacion-circulo-item" id="itemProg3">
+            <div class="content__section-nuestrafundacion-circulo-item-txt">
+              <p>Albergue</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#albergue">Ver mas                            
+                <img src="{% static 'css/images/icono/flecha_amarilla.svg' %}" alt="logo de flecha"/></button>
+            </div>
+          </div>
+          <div class="modal fade modal fade" id="albergue" tabindex="-1" aria-labelledby="modalComedorLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="albergueLabel"><strong>Albergue</strong></h1>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Servio de albergue “Ayuda a otros y verás cómo en realidad estás haciendo un mundo mejor para ti”<img src="{% static 'css/images/Mobile/itemsCircle_1-600x600.jpg' %}" alt="Albergue" srcset=""/></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__section-nuestrafundacion-circulo-item" id="itemProg4">
+            <div class="content__section-nuestrafundacion-circulo-item-txt">
+              <p>Meriendas a hospitales</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#Meriendas">Ver mas                                                        
+                <img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></button>
+            </div>
+          </div>
+          <div class="modal fade modal fade" id="Meriendas" tabindex="-1" aria-labelledby="MeriendasLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="MeriendasLabel">Meriendas a <br/> <strong>hospitales</strong></h1>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <p>Servico de desayunos a hospitales<br/> <br/>“Todos necesitan voluntarios como tú”<img src="{% static 'css/images/Mobile/itemsCircle_4-600x600.jpg' %}" alt="Meriendas" srcset=""/></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__section-nuestrafundacion-circulo-item" id="itemProg5">
+            <div class="content__section-nuestrafundacion-circulo-item-txt">
+              <p>Visitas a asilos anexos y clínicas</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#visitasHospitales">Ver mas                                                        
+                <img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></button>
+            </div>
+          </div>
+          <div class="modal fade modal fade" id="visitasHospitales" tabindex="-1" aria-labelledby="visitasHospitalesLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="visitasHospitalesLabel">Visitas a <br/> <strong>asilos</strong> <br/> <strong>anexos</strong> <br/> <strong>y clínicas</strong></h1>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <p>"La sonrisa que te regala un niño o un adulto con todo su corazón es una de las cosas más hermosas que se pueden experimentar"<img src="{% static 'css/images/Mobile/itemsCircle_5-600x600.jpg'%}" alt="visitas" srcset=""/></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__section-nuestrafundacion-blog"> 
+          <h1>Nuestro Blog   </h1>
+          <div class="content__section-nuestrafundacion-blog-principal">
+            <div class="content__section-nuestrafundacion-blogimg">
+              <p>Titulo del post</p><img id="fotopost" src="{% static 'css/images/Mobile/itemsCircle_1-600x600.jpg'%}" alt="img post"/>
+              <div class="content__section-nuestrafundacion-blogimg-box">
+                <p><strong>Autor</strong> Dayana ornelas</p>
+                <p><strong>Fecha</strong> 10/10/2023</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem natus impedit placeat, voluptas quia voluptates maiores eum aperiam nesciunt beatae quis explicabo labore incidunt atque enim non cumque neque et. <a href="single.html" target="blank">ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></a></p>
+              </div>
+            </div>
+            <div class="content__section-nuestrafundacion-blogimg">
+              <p>Titulo del post</p><img id="fotopost" src="{% static 'css/images/Mobile/itemsCircle_1-600x600.jpg'%}" alt="img post"/>
+              <div class="content__section-nuestrafundacion-blogimg-box">
+                <p><strong>Autor</strong> Dayana ornelas</p>
+                <p><strong>Fecha</strong> 11/10/2023</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem natus impedit placeat, voluptas quia voluptates maiores eum aperiam nesciunt beatae quis explicabo labore incidunt atque enim non cumque neque et. <a href="single.html" target="blank">ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></a></p>
+              </div>
+            </div>
+            <div class="content__section-nuestrafundacion-blogimg">
+              <p>Titulo del post</p><img id="fotopost" src="{% static 'css/images/Mobile/itemsCircle_1-600x600.jpg'%}" alt="img post"/>
+              <div class="content__section-nuestrafundacion-blogimg-box">
+                <p><strong>Autor</strong> Dayana ornelas</p>
+                <p><strong>Fecha</strong> 11/10/2023</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem natus impedit placeat, voluptas quia voluptates maiores eum aperiam nesciunt beatae quis explicabo labore incidunt atque enim non cumque neque et. <a href="single.html" target="blank">ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svg' %}" alt="logo de flecha"/></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer__header">
+        <div class="footer__header__box">
+          <div class="footer__header__box__phone">
+            <div class="footer__header-icon"><img src="{% static 'css/images/icono/telefono.svg' %}" alt="icono de teléfono fijo"/></div>
+            <div class="footer__header__phone-num"> 
+              <p>442 219-76-51 <br/>444 257-52-88</p>
+            </div>
+          </div>
+          <div class="footer__header__box__cellphone">
+            <div class="footer__header-icon"> <img src="{% static 'css/images/icono/telefono-inteligente.svg' %}" alt="ícono de un celular"/></div>
+            <div class="footer__header__cellphone-num"> 
+              <p>449-110-68 42</p>
+            </div>
+          </div>
+          <div class="footer__header__box__email"> 
+            <div class="footer__header-icon"><img src="{% static 'css/images/icono/correo.svg' %}" alt="ícono de un email"/></div>
+            <div class="footer__header__email-txt"> 
+              <p>contacto@fundacionpinita.org</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__box">
+        <div class="footer__box__body">
+          <div class="footer__box__body-logo"><img src="{% static 'css/images/icono/logotipo.svg'%}" alt="logotipo de Pinita"/></div>
+          <div class="footer__box__body-links">
+            <h2>Enlaces Directos</h2>
+            <ul> 
+              <li><a href="/">Inicio</a></li>
+              <li><a href="Fundacion.html">Fundacion Pinita </a></li>
+              <li><a href="Registro.html">Registro</a></li>
+              <li><a href="Contacto.html">Contacto</a></li>
+              <li><a href="privacidad.html">Aviso de Privacidad </a></li>
+            </ul>
+          </div>
+          <div class="footer__box__body-address"> <img src="{% static 'css/images/icono/maps.svg' %}" alt="ícono de ubicación"/>
+            <p>Calle Belice 211 col.</p>
+            <p>Santa Elena, CP</p>
+            <p>20230</p>
+            <p>Aguascalieintes,Ags</p>
+          </div>
+          <div class="footer__box__body-schedule">
+            <h2>HORARIOS DE ATENCIÓN</h2>
+            <div class="footer__box__body-schedule-hours">
+              <p>Lunes a Viernes: </p>
+              <p>9:00am - 6:00 pm</p>
+              <p>Sábado: </p>
+              <p>9:00am - 2:00 pm</p>
+              <p>Domingo: </p>
+              <p>Cerrado</p>
+            </div>
+          </div>
+          <div class="footer__box__body-socialmedia">
+            <div class="footer__box__body-socialmedia__icon">
+              <h2>SÍGUENOS</h2><a href="https://www.facebook.com/FundacionPinita"> <img src="{% static 'css/images/icono/facebook.svg' %}" alt="Ícono de facebook en footer"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__foot"> 
+          <div class="rights">
+            <p>FUNDACION PINITA 2023</p>
+          </div>
+          <p class="divisor"><strong>|</strong></p>
+          <div class="link__jmc"> <a href="https://jmcsoluciones.com" target="_blank">Desarrollado por <strong>JMC Soluciones</strong>  </a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app-dist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .content__section-nuestrafundacion-motvacion {
+    background-image: url(./images/Tablet/tabletItemDonacion_1_1440x900.jpg);
+    height: 466px;
+    background-position: center;
+    background-size: cover;
+  }
+  .content__section-nuestrafundacion-imgcafe {
+    margin-top: 20%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-image: url(./images/Tablet/tabletItemDonacion_2_1440x900.jpg);
+    width: auto;
+    height: 400px;
+    background-size: cover;
+  }
+  .content__section-nuestrafundacion-programas {
+    margin: 70px;
+    margin-top: 40%;
+  }
+  .content__section-nuestrafundacion-programas p:nth-child(1) {
+    color: #474643;
+    border-bottom: 1px solid #fcaf00;
+    margin-bottom: 0;
+    font-size: 6rem;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 2.5px #8F9090;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-body {
+    position: relative;
+    margin: 5px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .content__section-nuestrafundacion-blog {
+    margin: 17px;
+  }
+  .content__section-nuestrafundacion-blog-principal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content__section-nuestrafundacion-blog-principal-blogimg {
+    max-width: 1110px;
+    width: 500px;
+    margin: 0 auto;
+  }
+  .content__section-nuestrafundacion-blog-principal-blogimg #fotopost {
+    max-width: 400px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    /* Altura automática para mantener la proporción original */
+    border-radius: 10px 10px 10px 10px;
+  }
+  .contentContacto__titulo__formu {
+    margin: 0 auto;
+    width: 500px;
+  }
+  .contentContacto__maps iframe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content__section-Fundacion {
+    background-image: url(./images/Tablet/tabletSlidesSomos-1110x466.jpg);
+  }
+  .content__section-Fundacion-Mision {
+    background-image: url(./images/Tablet/tabletItemMision1440x900.jpg);
+  }
+  .content__section-Fundacion-Vision {
+    background-image: url(./images/Tablet/tabletItemVision1440x900.jpg);
+    width: auto;
+    height: 700px;
+  }
+  .content__section-Fundacion-quienessomos #fundacion {
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  }
+  .content__section-Fundacion-quienessomos .btn.btn-primary {
+    margin-left: 338px;
+  }
+  .content.login.content {
+    padding: 10px;
+  }
+  .content.login.content__inicio__form {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 .form-label2 {
+    color: #838381;
+    font-family: 'Inter', sans-serf;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 5%;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 p {
+    font-size: 1.2rem;
+    color: #838381;
+    font-family: 'Inter', sans-serf;
+  }
+  

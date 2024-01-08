@@ -1,0 +1,614 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .slideContent {
+    top: 14px;
+    border-radius: 50px 50px 50px 50px;
+    width: 76vw;
+    height: 289px;
+    margin-left: 150px;
+  }
+  .slideContent p:nth-child(1) {
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    border-bottom: 2px solid #fcaf00;
+    font-size: 4.2rem;
+    font-weight: 300;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    width: 438px;
+    margin-left: 292px;
+    margin-bottom: 0;
+  }
+  .slideContent p:nth-child(2) {
+    margin-left: 460px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  .slideContent p:nth-child(3) {
+    margin-left: 410px;
+    color: #fcaf00;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  .slideContent__link {
+    margin-left: 415px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    background-color: #fcaf00;
+    border-radius: 20px;
+    padding: 5px 10px;
+    /* etiqueta a */
+    /* imagen de flecha*/
+  }
+  .slideContent__link a {
+    text-decoration: none;
+    color: white;
+    padding: ▸ 9px 25px;
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+  .slideContent__link img {
+    width: 25px;
+  }
+  .slideContent__box h2 {
+    font-size: 2.5rem;
+    margin-left: 217px;
+    font-weight: 350;
+  }
+  .slideContent__box a {
+    padding: 0px 8px;
+    font-size: 2rem;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-left: 448px;
+  }
+  .slideContent__box img {
+    margin-left: 396px;
+    width: 198px;
+  }
+  .content__section-nuestrafundacion {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .content__section-nuestrafundacion-txt {
+    margin-top: 30px;
+  }
+  .content__section-nuestrafundacion-txt p {
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .content__section-nuestrafundacion-txt a {
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: #474643;
+    margin: 430px;
+  }
+  .content__section-nuestrafundacion-txt a img {
+    width: 18px;
+  }
+  .content__section-nuestrafundacion-motivacion {
+    background-size: cover;
+    margin-top: 10%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-image: url(./images/Tablet/tabletItemDonacion_1_1440x900.jpg);
+    background-repeat: no-repeat;
+    -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    width: 0auto;
+    height: 400px;
+  }
+  .content__section-nuestrafundacion-motivacion-text {
+    position: absolute;
+    top: 20%;
+    right: 0px;
+    height: 250px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 35%;
+    border-radius: 25px 0 0 0;
+    padding: 10px;
+    background-color: rgba(33, 37, 41, 0.555);
+  }
+  .content__section-nuestrafundacion-motivacion-text p {
+    color: #FFFFFF;
+    font-family: 32px;
+    font-size: 2.1rem;
+    margin-left: 55%;
+  }
+  .content__section-nuestrafundacion-imgcafe {
+    margin-top: 20%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-image: url(./images/Tablet/tabletItemDonacion_2_1440x900.jpg);
+    width: auto;
+    height: 400px;
+    background-size: cover;
+  }
+  .content__section-nuestrafundacion-imgcafe-color {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    background-color: rgba(238, 152, 24, 0.42);
+  }
+  .content__section-nuestrafundacion-imgcafe-color p {
+    margin: 20px;
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: left;
+    margin-right: 700px;
+    font-family: 'Inter', sans-serf;
+  }
+  .content__section-nuestrafundacion-imgcafe-cuadro {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    position: absolute;
+    /* Establece una posición absoluta para el elemento con color */
+    top: 330px;
+    left: 400px;
+    width: 30%;
+    /* Ocupa todo el ancho del contenedor */
+    height: 40%;
+    /* Ocupa todo el alto del contenedor */
+    background-color: #B0710D;
+    /* Color azul con 50% de opacidad */
+    border-radius: 30px 0 30px 0;
+  }
+  .content__section-nuestrafundacion-imgcafe-cuadro p {
+    margin: 15px;
+    position: absolute;
+    top: 30%;
+    color: #FFFFFF;
+    font-family: 32px;
+    font-size: 1.8rem;
+    right: 30px;
+  }
+  .content__section-nuestrafundacion-programas {
+    margin-top: 20%;
+  }
+  .content__section-nuestrafundacion-programas strong {
+    font-size: 4.2rem;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-title {
+    font-size: 2rem ;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-title strong {
+    font-size: 2.5rem;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-body {
+    height: 190px;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-body p {
+    font-size: 1.8rem;
+  }
+  .content__section-nuestrafundacion-blog {
+    margin: 17px;
+  }
+  .content__section-nuestrafundacion-blog-principal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content__section-nuestrafundacion-blog-principal-blogimg {
+    max-width: 1110px;
+    margin-left: 484px;
+    width: 500px;
+    margin: 0 auto;
+  }
+  .content__section-nuestrafundacion-blog-principal-blogimg #fotopost {
+    max-width: 400px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    /* Altura automática para mantener la proporción original */
+    border-radius: 10px 10px 10px 10px;
+  }
+  .content__section-Fundacion {
+    overflow: hidden;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url(./images/Desktop/desktopSlides_Somos-1920x466.jpg);
+    background-size: contain;
+    width: 100%;
+    height: 460px;
+  }
+  .content__section-Fundacion-text {
+    height: 327px;
+    background-color: rgba(33, 37, 41, 0.555);
+  }
+  .content__section-Fundacion-text p:nth-child(1) {
+    top: -97px;
+    font-size: 4.2rem;
+    margin: 223px;
+  }
+  .content__section-Fundacion-quienessomos {
+    top: -152px;
+    max-width: 1110px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 400px;
+  }
+  .content__section-Fundacion-quienessomos h2 {
+    margin-top: 10%;
+    color: #474643;
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: 'Inter', sans-serf;
+  }
+  .content__section-Fundacion-quienessomos p {
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #474643;
+    margin: 5px;
+    margin-right: 150px;
+    font-size: 1.8rem;
+    font-family: 'Inter', sans-serf;
+    text-align: left;
+  }
+  .content__section-Fundacion-quienessomos img {
+    top: 60%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30px;
+    height: auto;
+  }
+  .content__section-Fundacion-quienessomos #fundacion {
+    position: absolute;
+    right: -20px;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    overflow: hidden;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    top: 30%;
+    background-size: cover;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    width: 190px;
+    height: 190px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .content__section-Fundacion-quienessomos .btn.btn-primary {
+    position: relative;
+    top: -30px;
+    width: auto;
+    border: none;
+    margin-left: 468px;
+    color: #fcaf00;
+    font-size: 1.9rem;
+    background: transparent;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  .content__section-Fundacion-quienessomos .modal-content .modal-title strong {
+    color: red;
+  }
+  .content__section-Fundacion-Mision {
+    top: -130px;
+    max-width: 1110px;
+    margin: 0 auto;
+    background-image: url(./images/Tablet/tabletItemMision1440x900.jpg);
+    background-size: cover;
+    height: 590px;
+  }
+  .content__section-Fundacion-Mision-text {
+    position: absolute;
+    top: 80px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    line-height: 1.2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 381px;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .content__section-Fundacion-Mision-text h1 {
+    margin: 45px;
+    color: #FFFFFF;
+    font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 2px solid #F39E16;
+  }
+  .content__section-Fundacion-Mision-text p {
+    font-family: 'Inter', sans-serf;
+    color: #FFFFFF;
+    margin-left: 266px;
+    margin-top: 64px;
+    font-size: 3rem;
+    text-align: center;
+    margin-right: 202px;
+  }
+  .content__section-Fundacion-Valores {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .content__section-Fundacion-Valores p {
+    top: -144px;
+    margin: 75px;
+    margin-left: 380px;
+    width: 395px;
+    position: relative;
+    color: #474643;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 2px solid #F39E16;
+  }
+  .content__section-Fundacion-lista {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .content__section-Fundacion-lista-listaval {
+    margin-top: -150px;
+    margin-left: 100px;
+  }
+  .content__section-Fundacion-lista-listaval-text {
+    top: -125px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 55px;
+    position: relative;
+    width: 544px;
+    margin-left: 276px;
+  }
+  .content__section-Fundacion-lista-listaval-text p {
+    text-decoration: none;
+    margin: 20px;
+    line-height: 25px;
+    font-size: 1.9rem;
+    position: absolute;
+    top: 80px;
+    color: #474643;
+    margin-left: 80px;
+    letter-spacing: 0.1sem;
+  }
+  .content__section-Fundacion-lista-listaval-text img {
+    position: absolute;
+    top: 97px;
+    width: 35px;
+    margin-left: 42px;
+  }
+  .content__section-Fundacion-vision {
+    top: 20px;
+    max-width: 1110px;
+    margin: 0 auto;
+    background-image: url(./images/Tablet/tabletItemVision1440x900.jpg);
+    background-size: cover;
+    height: 590px;
+  }
+  .content__section-Fundacion-vision-text {
+    position: absolute;
+    top: 80px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    line-height: 1.2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 381px;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .content__section-Fundacion-vision-text h1 {
+    margin: 45px;
+    color: #FFFFFF;
+    font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 2px solid #F39E16;
+  }
+  .content__section-Fundacion-vision-text p {
+    font-family: 'Inter', sans-serf;
+    color: #FFFFFF;
+    margin-left: 266px;
+    margin-top: 64px;
+    font-size: 3rem;
+    text-align: center;
+    margin-right: 202px;
+  }
+  .contentRegistro {
+    top: 10px;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .contentRegistro__box__usuario p:nth-child(1) {
+    text-align: end;
+    font-size: 2rem;
+  }
+  .contentRegistro__box__usuario__formulario {
+    margin: 0 auto;
+    padding: 10px;
+    -webkit-box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+            box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 {
+    margin: 15px;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 .form-label2 {
+    color: #838381;
+    font-family: 'Inter', sans-serf;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 5%;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 p {
+    font-size: 1.2rem;
+    color: #838381;
+    font-family: 'Inter', sans-serf;
+  }
+  .contentRegistro__box__usuario__formulario .boton {
+    padding: 1px;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contentRegistro__box__usuario__formulario .boton-azul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 15px;
+  }
+  /*-----------------Login-----------------------*/
+  .content.login.content {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .content.login.content__inicio p {
+    font-size: 2rem;
+    text-align: end;
+  }
+  .content.login.content__inicio__form {
+    margin: 0 auto;
+    padding: 5px;
+    -webkit-box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+            box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+  }
+  .content.login.content__inicio__form .mb-3 {
+    margin: 20px;
+    margin-top: 5%;
+  }
+  .content.login.content__inicio__form .mb-3 .form-label {
+    font-family: 'Inter', sans-serf;
+    color: black;
+    font-size: 1.5rem;
+  }
+  .content.login.content__inicio__form .mb-3 input {
+    font-family: 'Inter', sans-serf;
+    color: black;
+    font-size: 1.2rem;
+    width: 368px;
+    padding: 2px;
+  }
+  .content.login.content__inicio .boton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0px auto;
+  }
+  /*-------------contacto--------------------------*/
+  .contentContacto {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .contentContacto__titulo p {
+    text-align: end;
+    font-size: 2rem;
+  }
+  .contentContacto__titulo__formu {
+    margin: 0 auto;
+    width: 500px;
+  }
+  /*------------------footer--------------------*/
+  footer {
+    margin-top: -5px;
+    padding-top: 115px;
+  }
+  footer .footer__box__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  

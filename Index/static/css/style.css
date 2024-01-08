@@ -1,0 +1,1311 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .carousel-item {
+    position: relative !important;
+    display: inline-block !important;
+  }
+  /*Aqui empieza el primer carrusel */
+  .slideContent {
+    padding: 0;
+    position: absolute;
+    top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    color: #FFFFFF;
+    width: 100vw;
+    background-color: rgba(33, 37, 41, 0.6);
+    padding-left: 20px ;
+    /* parrafos de fundacio , pinita & mas que sonrisas*/
+    /*Fundacion*/
+    /*parrafo de pinita*/
+    /*parrafo de mas que sonrisas*/
+    /*link de nuestra fundacion*/
+  }
+  .slideContent p:nth-child(1) {
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    border-bottom: 2px solid #fcaf00;
+    font-size: 2.4rem;
+    font-weight: 300;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .slideContent p:nth-child(2) {
+    font-family: 'Raleway', sans-serif;
+    font-size: 6rem;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  .slideContent p:nth-child(3) {
+    color: #fcaf00;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+  }
+  .slideContent__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    background-color: #fcaf00;
+    border-radius: 20px;
+    padding: 5px 10px;
+    /* etiqueta a */
+    /* imagen de flecha*/
+  }
+  .slideContent__link a {
+    text-decoration: none;
+    color: white;
+    padding: ▸ 9px 25px;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  .slideContent__link img {
+    width: 25px;
+  }
+  .slideContent__box h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.4rem;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #FFFFFF;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+    font-weight: 350;
+  }
+  .slideContent__box img {
+    width: 160px;
+  }
+  .slideContent__box a {
+    /*justify-content: center;*/
+    /* align-items: center;*/
+    /* gap: 5px;
+              margin: 5% 0;
+              background-color: @color-primario;
+              border-radius: 13px;
+              padding: 0px 9px;  
+  
+              text-decoration: none;
+              color: white;
+              font-size:  2rem;
+              font-weight:300;*/
+  }
+  /*----------------seccion de la pagina principal--------------*/
+  .content__section-nuestrafundacion {
+    /*imagen de pinita en hostital*/
+    /*-----parrafo de dos bordes-----------------*/
+    /*-----fondo de payaso con la ancianita en color cafe------*/
+    /*estilos de los circulos de los programas*/
+    /*estilos para los blog*/
+  }
+  .content__section-nuestrafundacion-txt p {
+    color: #474643;
+    font-size: 1.8rem;
+    font-family: 'Inter', sans-serf;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 12px;
+    line-height: 1.4;
+    /*espacio entre lineas*/
+  }
+  .content__section-nuestrafundacion-txt a {
+    text-decoration: none;
+    color: #474643;
+    margin: 15px;
+    font-family: 'League Spartan', sans-serf;
+    font-size: 2rem;
+    font-weight: 750;
+  }
+  .content__section-nuestrafundacion-txt a img {
+    width: 25px;
+  }
+  .content__section-nuestrafundacion-motivacion {
+    background-size: cover;
+    margin-top: 10%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-image: url(./images/Mobile/mobileItemDonacion480x520.jpg);
+    background-repeat: no-repeat;
+    -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    width: auto;
+    height: 400px;
+  }
+  .content__section-nuestrafundacion-motivacion-text {
+    position: absolute;
+    top: 30%;
+    right: 0px;
+    height: 250px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 45%;
+    border-radius: 25px 0 0 0;
+    padding: 5px;
+    background-color: rgba(33, 37, 41, 0.555);
+  }
+  .content__section-nuestrafundacion-motivacion-text p {
+    color: #FFFFFF;
+    font-family: 32px;
+    font-size: 2.4rem;
+    text-align: end;
+  }
+  .content__section-nuestrafundacion-ayuda {
+    margin-top: 15%;
+  }
+  .content__section-nuestrafundacion-ayuda p {
+    border-top: 2px solid #fcaf00;
+    border-bottom: 2px solid #fcaf00;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 25px;
+    text-align: center;
+    font-weight: 450;
+  }
+  .content__section-nuestrafundacion-imgcafe {
+    margin-top: 20%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-image: url(./images/Mobile/mobileItemDonacion2480x520.jpg);
+    width: 360;
+    height: 400px;
+    background-size: cover;
+  }
+  .content__section-nuestrafundacion-imgcafe-color {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    background-color: rgba(238, 152, 24, 0.42);
+  }
+  .content__section-nuestrafundacion-imgcafe-color p {
+    margin: 10px;
+    display: contents;
+    padding: 5px;
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin-right: 150px;
+    font-family: 'Inter', sans-serf;
+  }
+  .content__section-nuestrafundacion-imgcafe-cuadro {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    position: absolute;
+    /* Establece una posición absoluta para el elemento con color */
+    top: 320px;
+    left: 50px;
+    width: 70%;
+    /* Ocupa todo el ancho del contenedor */
+    height: 40%;
+    /* Ocupa todo el alto del contenedor */
+    background-color: #B0710D;
+    /* Color azul con 50% de opacidad */
+    border-radius: 30px 0 30px 0;
+  }
+  .content__section-nuestrafundacion-imgcafe-cuadro p {
+    margin-top: 50px;
+    top: 20px;
+    color: #FFFFFF;
+    font-family: 32px;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .content__section-nuestrafundacion-programas {
+    margin: 70px;
+    margin-top: 40%;
+  }
+  .content__section-nuestrafundacion-programas p:nth-child(1) {
+    color: #474643;
+    border-bottom: 1px solid #fcaf00;
+    margin-bottom: 0;
+    font-size: 3.5rem;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 2.5px #8F9090;
+  }
+  .content__section-nuestrafundacion-programas p:nth-child(2) {
+    color: black;
+    font-size: 1.6rem;
+    margin: 6px 6px;
+    padding: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+  }
+  .content__section-nuestrafundacion-circulo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /*-------estilo en modales------*/
+  }
+  .content__section-nuestrafundacion-circulo #itemProg1 {
+    background-image: url(./images/Mobile/itemsCircle_2-600x600.jpg);
+  }
+  .content__section-nuestrafundacion-circulo #itemProg2 {
+    background-image: url(./images/Mobile/itemsCircle_3-600x600.jpg);
+  }
+  .content__section-nuestrafundacion-circulo #itemProg3 {
+    background-image: url(./images/Mobile/itemsCircle_1-600x600.jpg);
+  }
+  .content__section-nuestrafundacion-circulo #itemProg4 {
+    background-image: url(./images/Mobile/itemsCircle_4-600x600.jpg);
+  }
+  .content__section-nuestrafundacion-circulo #itemProg5 {
+    background-image: url(./images/Mobile/itemsCircle_5-600x600.jpg);
+  }
+  .content__section-nuestrafundacion-circulo-item {
+    background-position: center;
+    background-size: cover;
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+    width: 165px;
+    height: 165px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin: 5px;
+  }
+  .content__section-nuestrafundacion-circulo-item-txt {
+    background-color: rgba(33, 37, 41, 0.555);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 160px;
+    height: 160px;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content__section-nuestrafundacion-circulo-item-txt a {
+    text-decoration: none;
+    float: right;
+    color: #fcaf00;
+    font-size: 1.6rem;
+    font-weight: 200;
+  }
+  .content__section-nuestrafundacion-circulo-item-txt a img {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 25px;
+  }
+  .content__section-nuestrafundacion-circulo-item-txt .btn.btn-primary {
+    position: relative;
+    width: auto;
+    border: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 25px;
+    color: #fcaf00;
+    font-size: 1.9rem;
+    background: transparent;
+  }
+  .content__section-nuestrafundacion-circulo-item-txt .btn.btn-primary img {
+    margin-top: 3px;
+    float: right;
+    width: 25px;
+  }
+  .content__section-nuestrafundacion-circulo-item-txt p {
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #FFFFFF;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 32px;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content {
+    overflow: hidden;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-title {
+    color: #474643;
+    font-size: 2.3rem !important;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-title strong {
+    font-size: 3rem;
+    line-height: 25px;
+    border-bottom: 2px solid #FCAF00;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-body {
+    position: relative;
+    margin: 5px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-body p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #474643;
+    margin: 5px;
+    margin-right: 180px;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serf;
+    text-align: left;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-body img {
+    position: absolute;
+    right: -15px;
+    width: 160px;
+    height: auto;
+    border-radius: 50%;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-body .contentRegistro__box__usuario p {
+    color: #838381;
+    margin: 2px;
+    font-size: 1.2rem;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-body.reg {
+    margin: 5px;
+    height: auto;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-body.mensaje {
+    height: auto;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-footer .btn.btn.btn-primary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: #fcaf00;
+    font-size: 1.7rem;
+  }
+  .content__section-nuestrafundacion-circulo .modal-content .modal-footer .btn.btn.btn-primary .flecha {
+    width: 28px;
+  }
+  .content__section-nuestrafundacion-blog h1 {
+    color: #474643;
+    padding-bottom: 0;
+    font-size: 4.5rem;
+    line-height: normal;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 0px 1px 2.5px #8F9090;
+  }
+  .content__section-nuestrafundacion-blogimg {
+    width: 341px;
+    margin-left: 10px;
+    line-height: 1.5;
+    margin-top: 20px;
+    -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    /* este es el parrafo de "Titulo de post"*/
+  }
+  .content__section-nuestrafundacion-blogimg p:nth-child(1) {
+    font-size: 2.5rem;
+    color: #474643;
+    text-align: center;
+    margin: 0px;
+  }
+  .content__section-nuestrafundacion-blogimg #fotopost {
+    max-width: 270px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    /* Altura automática para mantener la proporción original */
+    border-radius: 10px 10px 10px 10px;
+  }
+  .content__section-nuestrafundacion-blogimg-box {
+    /*---Autor----*/
+    margin: 10px;
+    /*---fecha---*/
+    /*---texto----*/
+  }
+  .content__section-nuestrafundacion-blogimg-box p:nth-child(1) {
+    text-align: left;
+    font-size: 1.3rem;
+    color: black;
+    margin-left: 20px;
+    line-height: 2em;
+  }
+  .content__section-nuestrafundacion-blogimg-box p:nth-child(2) {
+    margin-left: 20px;
+    font-size: 1.3rem;
+    color: black;
+    border-bottom: 1px solid #fcaf00;
+  }
+  .content__section-nuestrafundacion-blogimg-box p:nth-child(3) {
+    margin-left: 10px;
+    padding-left: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: justify;
+    color: black;
+  }
+  .content__section-nuestrafundacion-blogimg-box a {
+    line-height: 30px;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: end !important;
+    align-items: end;
+    color: #474643;
+    font-size: 1.8rem;
+  }
+  .content__section-nuestrafundacion-blogimg-box img {
+    width: 30px;
+    height: auto;
+  }
+  .content__section-nuestrafundacion-blogimg .btn.btn-primary {
+    background-color: #fcaf00;
+    font-family: 'Inter', sans-serf;
+    font-size: 1.8rem;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+    margin: 20px 50px;
+  }
+  /**--------------FUNDACION-----------------------*/
+  #fundacion .modal-header strong {
+    font-size: 3rem !important;
+    border-bottom: 2px solid #FCAF00;
+  }
+  #fundacion .modal-body #pmodal {
+    color: #474643;
+    margin: 5px;
+    font-size: 1.5rem;
+  }
+  .content__section-Fundacion {
+    overflow: hidden;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-repeat: no-repeat;
+    background-image: url(../images/Mobile/mobileSlide_somos-722x1048.jpg);
+    background-size: cover;
+    width: auto;
+    height: 400px;
+    /*------Contenido de Mision-----*/
+  }
+  .content__section-Fundacion-text {
+    line-height: 1.2;
+    position: absolute;
+    background-size: contain;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(33, 37, 41, 0.555);
+  }
+  .content__section-Fundacion-text p:nth-child(1) {
+    font-family: 'Inter', sans-serf;
+    position: relative;
+    top: 40px;
+    margin: 10px;
+    text-align: center;
+    font-size: 4.2rem;
+    color: #FFFFFF;
+    border-bottom: 2px solid #F39E16;
+  }
+  .content__section-Fundacion-quienessomos {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .content__section-Fundacion-quienessomos h2 {
+    margin-top: 10%;
+    color: #474643;
+    text-align: center;
+    font-size: 3.1rem;
+    font-family: 'Inter', sans-serf;
+  }
+  .content__section-Fundacion-quienessomos p {
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #474643;
+    margin: 5px;
+    margin-right: 150px;
+    font-size: 1.8rem;
+    font-family: 'Inter', sans-serf;
+    text-align: left;
+  }
+  .content__section-Fundacion-quienessomos img {
+    top: 90%;
+    position: absolute;
+    right: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30px;
+    height: auto;
+  }
+  .content__section-Fundacion-quienessomos #fundacion {
+    position: absolute;
+    right: -50px;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    overflow: hidden;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    top: 30%;
+    background-size: cover;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    width: 190px;
+    height: 190px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .content__section-Fundacion-quienessomos .btn.btn-primary {
+    position: relative;
+    top: -30px;
+    width: auto;
+    border: none;
+    margin-left: 60px;
+    color: #fcaf00;
+    font-size: 1.9rem;
+    background: transparent;
+  }
+  .content__section-Fundacion-quienessomos .vector {
+    position: relative;
+    top: -25px;
+    left: 70px;
+    width: 25px;
+  }
+  .content__section-Fundacion-Mision {
+    top: 10px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url(../images/Mobile/mobileItemMision480x520.jpg);
+    background-size: cover;
+    width: auto;
+    height: 480px;
+  }
+  .content__section-Fundacion-Mision-text {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    line-height: 1.2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 360vw;
+    height: 480px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .content__section-Fundacion-Mision-text h1 {
+    margin: 20px;
+    color: #FFFFFF;
+    font-size: 4.2rem;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 2px solid #F39E16;
+  }
+  .content__section-Fundacion-Mision-text p {
+    margin-right: 100px;
+    font-family: 'Inter', sans-serf;
+    margin: 20px;
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .content__section-Fundacion-Valores p {
+    margin: 75px;
+    top: 5px;
+    position: relative;
+    color: #474643;
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 2px solid #F39E16;
+  }
+  .content__section-Fundacion-lista-listaval-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 55px;
+    position: relative;
+  }
+  .content__section-Fundacion-lista-listaval-text p {
+    text-decoration: none;
+    line-height: 25px;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 0x;
+    color: #474643;
+    margin-left: 80px;
+    letter-spacing: 0.1sem;
+  }
+  .content__section-Fundacion-lista-listaval-text img {
+    position: absolute;
+    top: 0;
+    width: 35px;
+    margin-left: 42px;
+  }
+  .content__section-Fundacion-vision {
+    margin-top: 10px;
+    top: 10px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url(../images/Mobile/mobileItemVision480x520.jpg);
+    background-size: cover;
+    width: auto;
+    height: 480px;
+  }
+  .content__section-Fundacion-vision-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    line-height: 1.2;
+    width: 360vw;
+    height: 480px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .content__section-Fundacion-vision-text h2 {
+    margin: 20px;
+    color: #FFFFFF;
+    font-size: 4.2rem;
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    border-bottom: 2px solid #F39E16;
+  }
+  .content__section-Fundacion-vision-text p {
+    font-family: 'Inter', sans-serf;
+    margin: 20px;
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    text-align: right;
+  }
+  /*------------Contenido Login-----------------*/
+  .content.login.content {
+    padding: 10px;
+  }
+  .content.login.content__inicio p {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 2px solid #3DAEED;
+  }
+  .content.login.content__inicio__form {
+    margin: 15px;
+    padding: 5px;
+    -webkit-box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+            box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+    border-radius: 10px;
+  }
+  .content.login.content__inicio__form .mb-3 {
+    margin: 15px;
+    margin-top: 10%;
+  }
+  .content.login.content__inicio__form .mb-3 .form-label {
+    font-family: 'Inter', sans-serf;
+    color: black;
+    font-size: 1.5rem;
+  }
+  .content.login.content__inicio__form .mb-3 input {
+    font-family: 'Inter', sans-serf;
+    color: black;
+    font-size: 1.2rem;
+  }
+  .content.login.content__inicio__form .boton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content.login.content__inicio__form .boton .btn-lg {
+    background-color: #fcaf00;
+    border-color: #fcaf00;
+  }
+  /*----------REGISTRO--------------------------*/
+  .contentRegistro {
+    padding: 15px;
+  }
+  .contentRegistro__box__usuario p:nth-child(1) {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 2px solid #3DAEED;
+    margin-bottom: 10%;
+  }
+  .contentRegistro__box__usuario p:nth-child(2) {
+    margin: 15px;
+    padding: 5px;
+    font-size: 1.8rem;
+    color: #474643;
+  }
+  .contentRegistro__box__usuario__formulario {
+    margin: 15px;
+    padding: 10px;
+    -webkit-box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+            box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+    border-radius: 10px;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 {
+    margin: 15px;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 .form-label {
+    color: black;
+    font-family: 'Inter', sans-serf;
+    font-size: 1.5rem;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 .form-label2 {
+    color: #838381;
+    font-family: 'Inter', sans-serf;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 5%;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 .form-select {
+    font-family: 'Inter', sans-serf;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 select {
+    font-size: 1.2rem;
+    color: #212529;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 .form-control {
+    font-size: 1.2rem;
+    padding: 13px;
+    color: #838381;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 p {
+    font-size: 1.2rem;
+    color: #838381;
+    font-family: 'Inter', sans-serf;
+  }
+  .contentRegistro__box__usuario__formulario .mb-3 input {
+    font-family: 'Inter', sans-serf;
+    font-size: 1.6rem;
+  }
+  .contentRegistro__box__usuario__formulario .boton {
+    padding: 10px;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contentRegistro__box__usuario__formulario .boton-azul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 15px;
+  }
+  .contentRegistro__box__usuario__formulario .boton-azul button {
+    padding: 12px;
+    border: none;
+    font-family: 'Inter', sans-serf;
+    background: #2CA7EC;
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+  /*----------Contacto--------------------------*/
+  .contentContacto {
+    padding: 10px;
+  }
+  .contentContacto__titulo p {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 2px solid #3DAEED;
+  }
+  .contentContacto__titulo__formu {
+    margin: 25px;
+    padding: 10px;
+    -webkit-box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+            box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+    border-radius: 15px;
+  }
+  .contentContacto__titulo__formu .mb-3 {
+    margin-top: 10%;
+  }
+  .contentContacto__titulo__formu .mb-3 .form-label {
+    font-family: 'Inter', sans-serf;
+    color: black;
+    font-size: 1.5rem;
+  }
+  .contentContacto__titulo__formu .mb-3 input {
+    font-family: 'Inter', sans-serf;
+    color: black;
+    font-size: 1.2rem;
+  }
+  .contentContacto__titulo__formu .boton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contentContacto__titulo__formu .boton button {
+    font-weight: 500;
+  }
+  .contentContacto #mapa {
+    margin-top: 10px;
+    margin: 0 auto;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contentContacto #mapa iframe {
+    margin-top: 40px;
+  }
+  /*-----------BLOG POST-------------------------*/
+  .content.blog.content-inicio p {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 2px solid #3DAEED;
+    margin-bottom: 10%;
+  }
+  .content.blog.content-inicio-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content.blog.content-inicio-box .btn.btn-primary.btn-lg {
+    margin-top: 5px;
+    margin-bottom: 12px;
+    background-color: #fcaf00;
+    border-color: #fcaf00;
+    font-size: 1.5rem;
+  }
+  .content.blog.content-inicio-box .btn.btn-primary.btn-lg img {
+    width: 18px;
+  }
+  .content.blog.content .modal-content .modal-title {
+    margin-left: 90px;
+    color: #2CA7EC;
+    font-size: 2.5rem !important;
+  }
+  .content.blog.content .modal-content .modal-body {
+    margin: 15px;
+    padding: 5px;
+    -webkit-box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+            box-shadow: rgba(253, 183, 0) 0px 0px 0px 1px;
+    border-radius: 10px;
+  }
+  .content.blog.content .modal-content .modal-body .content__form__box {
+    display: -ms-grid;
+    display: grid;
+    gap: 5px;
+    margin: 10px auto;
+    width: 280px;
+  }
+  .content.blog.content .modal-content .modal-body .content__form__box .content__form__box-label {
+    font-size: 1.5rem;
+  }
+  .content.blog.content .modal-content .modal-body .content__form__box textarea {
+    font-size: 1.2rem;
+  }
+  .content.blog.content .modal-content .modal-body .content__form__box span {
+    font-size: 1.2rem;
+    color: #838381;
+  }
+  .content.blog.content .modal-content .modal-body input {
+    font-size: 1.2rem;
+  }
+  .content.blog.content .modal-content .modal-footer .btn.btn-danger {
+    background-color: #fcaf00;
+    border-color: #fcaf00;
+  }
+  .content.blog.content-tabs-item {
+    margin: 14px;
+  }
+  .content.blog.content-tabs-item-control__table #modificar {
+    background-color: red !important;
+  }
+  .content.blog.content-tabs-item-control__table #eliminar {
+    background-color: purple !important;
+  }
+  .content.blog.content-tabs-item-control__table-striped thead tr th {
+    color: red !important;
+  }
+  /*--------------footer--------*/
+  footer {
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #FFFFFF;
+  }
+  footer .footer__header {
+    background-color: #2CA7EC;
+    width: 100%;
+  }
+  footer .footer__header__box {
+    display: -ms-grid;
+    display: grid;
+    color: #FFFFFF;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+        grid-template-areas: "phone cellphone" "email email";
+    font-size: 'Raleway', sans-serif;
+    line-height: 2rem;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px 10px;
+    margin: 0 auto;
+  }
+  footer .footer__header__box__phone {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: phone;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer__header__box__phone p,
+  footer .footer__header__box__cellphone p,
+  footer .footer__header__box__email p {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-family: 'inter';
+    font-weight: 100;
+  }
+  footer .footer__header__box__cellphone {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: cellphone;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  footer .footer__header__box__email {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: email;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 10px 0px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer__header-icon img {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+  }
+  footer .footer__box__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #474643;
+    padding: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer__box__body-logo {
+    width: 200px;
+  }
+  footer .footer__box__body-links {
+    margin: 30px auto;
+    text-align: center;
+  }
+  footer .footer__box__body-links h2 {
+    font-weight: 32px;
+    font-size: 2rem;
+  }
+  footer .footer__box__body-links li {
+    margin: 10px 0;
+    list-style: none;
+    text-align: center;
+  }
+  footer .footer__box__body-links li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+  }
+  footer .footer__box__body-address {
+    text-align: center;
+    /*---------------AQUI--------------*/
+  }
+  footer .footer__box__body-address img {
+    width: 80px;
+    margin: 20px auto;
+  }
+  footer .footer__box__body-address p {
+    font-size: 16px;
+    width: 170px;
+    text-align: center;
+    margin: 5px auto;
+    font-weight: 400;
+  }
+  footer .footer__box__body-schedule {
+    margin: 40px auto;
+    text-align: center;
+  }
+  footer .footer__box__body-schedule h2 {
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  footer .footer__box__body-schedule-hours {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "semana horario-semana" "sabado horario-sabado" "domingo horario-domingo";
+    font-size: 1.5rem;
+  }
+  footer .footer__box__body-schedule-hours p:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: semana;
+    margin: 0 10px;
+    text-align: right;
+  }
+  footer .footer__box__body-schedule-hours p:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: horario-semana;
+    margin: 0 10px;
+    text-align: left;
+  }
+  footer .footer__box__body-schedule-hours p:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: sabado;
+    margin: 0 10px;
+    text-align: right;
+  }
+  footer .footer__box__body-schedule-hours p:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: horario-sabado;
+    margin: 0 10px;
+    text-align: left;
+  }
+  footer .footer__box__body-schedule-hours p:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: domingo;
+    margin: 0 10px;
+    text-align: right;
+  }
+  footer .footer__box__body-schedule-hours p:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: horario-domingo;
+    margin: 0 10px;
+    text-align: left;
+  }
+  footer .footer__box__body-socialmedia {
+    text-align: center;
+  }
+  footer .footer__box__body-socialmedia #logoFooter {
+    display: none;
+  }
+  footer .footer__box__body-socialmedia__icon img {
+    width: 60px;
+  }
+  footer .footer__foot {
+    background-color: #fcaf00;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #FFFFFF;
+    height: 81px;
+    margin: 0;
+  }
+  footer .footer__foot p {
+    margin: 0;
+  }
+  footer .footer__foot .divisor {
+    display: none;
+  }
+  footer .footer__foot .rights p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    border-bottom: 1px solid #FFFFFF;
+  }
+  footer .footer__foot .link__jmc a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  
