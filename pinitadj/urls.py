@@ -23,5 +23,6 @@ urlpatterns = [
     path('moderador/',include('moderador.urls')),
     path('login/',include('login.urls')),
     path('fundacion/',include('Fundacion.urls')),
+    path('registro/',include('registro.urls')),
     
 ]

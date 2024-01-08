@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'moderador',
     'login',
     'Fundacion',
+    'registro',
 ]
 
 MIDDLEWARE = [
