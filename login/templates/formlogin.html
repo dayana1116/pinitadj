@@ -27,12 +27,12 @@
             <li class="menu__item"> <a class="menu__link" href="index.html">Inicio</a></li>
             <li class="menu__item menu__item-show"><a class="menu__link" href="#">Fundacion <img class="menu__arrow" src="{% static 'css/images/icono/chevronderecha.svg' %}" alt="flecha sub"/></a>
               <ul class="menu__nesting">
-                <li class="menu__inside"><a class="menu__link menu__link-inside" href="Fundacion.html">Quienes somos</a></li>
-                <li class="menu__inside"><a class="menu__link menu__link-inside" href="contacto.html">Contacto   </a></li>
+                <li class="menu__inside"><a class="menu__link menu__link-inside" href="{% url 'fundacion' %}">Quienes somos</a></li>
+                <li class="menu__inside"><a class="menu__link menu__link-inside" href="{% url 'contacto' %}">Contacto   </a></li>
               </ul>
             </li>
-            <li class="menu__item"> <a class="menu__link" href="formlogin.html">Login</a></li>
-            <li class="menu__item"> <a class="menu__link" href="Registro.html">Registro</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'login' %}">Login</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'registro' %}">Registro</a></li>
           </ul>
           <div class="menu__hamburger"> <img class="menu__img" src="{% static 'css/images/icono/menu.svg' %}" alt="icono de menu"/></div>
         </section>
