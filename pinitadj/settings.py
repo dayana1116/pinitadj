@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'Fundacion',
     'registro',
     'contacto',
+    'single',
 ]
 
 MIDDLEWARE = [
