@@ -25,5 +25,6 @@ urlpatterns = [
     path('fundacion/',include('Fundacion.urls')),
     path('registro/',include('registro.urls')),
     path('contacto/',include('contacto.urls')),
+    path('single/',include('single.urls')),
     
 ]
