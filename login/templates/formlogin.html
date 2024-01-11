@@ -31,7 +31,7 @@
                 <li class="menu__inside"><a class="menu__link menu__link-inside" href="{% url 'contacto' %}">Contacto   </a></li>
               </ul>
             </li>
-            <li class="menu__item"> <a class="menu__link" href="{% url 'Login' %}">Login</a></li>
+            <li class="menu__item"> <a class="menu__link" href="{% url 'login' %}">Login</a></li>
             <li class="menu__item"> <a class="menu__link" href="{% url 'registro' %}">Registro</a></li>
           </ul>
           <div class="menu__hamburger"> <img class="menu__img" src="{% static 'css/images/icono/menu.svg' %}" alt="icono de menu"/></div>
@@ -41,9 +41,12 @@
     <div class="content login content">
       <div class="content login content__inicio">
         <p>Inicio de Sesíon</p>
-       {# <form class="login__formLogin" method="post" action="{% url 'Login' %}"> #}
+        <form class="login__formLogin" method="post" action="{% url 'login' %}"> 
           {% csrf_token %}
         <div class="content login content__inicio__form">
+          {% for message in messages %}
+                    {{message}}
+                {% endfor %}
           <div class="mb-3">
             <label class="form-label" for="formGroupExampleInput">Usuario:</label>
             <input class="form-control" id="username" type="text" placeholder="Ingrese Usuario" name="username" required/>
@@ -54,6 +57,7 @@
           </div>
           <div  type="submit" class="boton"> <a class="btn btn-primary btn-lg" href="controlBlog.html" role="button">iniciar sesión</a></div>
         </div>
+        </form>
       </div>
     </div>
     <footer>
