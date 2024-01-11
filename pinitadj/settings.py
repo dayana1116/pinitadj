@@ -138,3 +138,6 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'Index\static'),
 ]
+
+# definir un modelo de usuraio personalizado que hereda de AbstractUser
+""" AUTH_USER_MODEL = 'login.Usuario' """
