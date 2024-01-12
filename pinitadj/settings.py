@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 from pathlib import Path
+""" from django.urls import reverse_lazys """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,5 +140,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'Index\static'),
 ]
 
-# definir un modelo de usuraio personalizado que hereda de AbstractUser
-""" AUTH_USER_MODEL = 'login.Usuario' """
+# definir un 
+#LOGIN_REFIRECT_URL = reverse_lazy ('moderador')
+

@@ -36,10 +36,10 @@
       <div class="content blog content-inicio">
         <p>Moderador</p>
         <div class="content blog content-inicio-box"> 
-          <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Nuevo Post<img src="{% static 'css/images/icono/nuevopost.svg' %}" alt="Nuevo post"/></button>
+          <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#agregarpost">Nuevo Post<img src="{% static 'css/images/icono/nuevopost.svg' %}" alt="Nuevo post"/></button>
         </div>
       </div>
-      <div class="modal fade modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalComedorLabel">
+      <div class="modal fade modal fade" id="agregarpost" tabindex="-1" aria-labelledby="modalComedorLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -47,6 +47,7 @@
               <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
+              {{form.as_p}}
               <form class="content__form form_insert_post" id="formulario" action="insert_post.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
                 <div class="content__form__box">
                   <label class="content__form__box-label" for="txtTitulo">T&iacute;tulo: </label>
@@ -69,7 +70,7 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+              <button class="btn btn-danger btn-lg" data-bs-dismiss="modal"  onclick="cerrar_modal_agregar">Cancelar</button>
               <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#">Postear</button>
             </div>
           </div>
@@ -103,13 +104,13 @@
                         <td>05/12/2023</td>
                         <td> </td>
                         <td>
-                          <button class="btn btn-primary btn-lg" id="modificar" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254; </i></button>
-                          <div class="modal fade modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalComedorLabel">
+                          <button class="btn btn-primary btn-lg" id="modificar" type="button" data-bs-toggle="modal" data-bs-target="#editar"> <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254; </i></button>
+                          <div class="modal fade modal fade" id="editar" tabindex="-1" aria-labelledby="modalComedorLabel">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo post</h1>
-                                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  <h1 class="modal-title fs-5" id="editar">Nuevo post</h1>
+                                  <button class="btn-close" type="button" data-bs-dismiss="modal" onclick="abrir_modal_edicion"><span aria-hidden="true">&times;</span></button>
                                 </div>
                                 <div class="modal-body">
                                   <form class="content__form form_insert_post" id="formulario" action="insert_post.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
@@ -134,7 +135,7 @@
                                   </form>
                                 </div>
                                 <div class="modal-footer">
-                                  <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                  <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" onclick="abrir_modal_edicion">Cancelar</button>
                                   <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#">Postear  </button>
                                 </div>
                               </div>
