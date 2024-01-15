@@ -142,4 +142,5 @@ STATICFILES_DIRS = [
 
 # definir un 
 #LOGIN_REFIRECT_URL = reverse_lazy ('moderador')
+LOGIN_URL = 'login'
 

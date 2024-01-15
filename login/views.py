@@ -17,7 +17,7 @@ def login_user(request):
         if user is not None:
             # El usuario es autenticado, iniciar sesión
             login(request, user)
-            return redirect('controlBlog')
+            return redirect('moderador')
         else:
             # El usuario no es autenticado, mostrar un mensaje de error
             messages.error(request, 'El nombre de usuario o contrseña no son correctos.')

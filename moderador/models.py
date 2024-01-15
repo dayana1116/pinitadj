@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
 # Create your models here.
 class Moderador(models.Model):
@@ -27,6 +28,17 @@ class Post(models.Model):
     extracto = models.CharField(max_length=400)
     idmoderador = models.ForeignKey(Moderador, models.DO_NOTHING, db_column='idmoderador')
 
+    def __str__(self):
+        return self.titulo
+   
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.slug = slugify(self.titulo)
+
+        super(Post, self).save(*args, **kwargs)
+
     class Meta:
         managed = True
         db_table = 'post'
+
+   

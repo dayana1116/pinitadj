@@ -47,7 +47,6 @@
               <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-              {{form.as_p}}
               <form class="content__form form_insert_post" id="formulario" action="insert_post.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
                 <div class="content__form__box">
                   <label class="content__form__box-label" for="txtTitulo">T&iacute;tulo: </label>
@@ -266,6 +265,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/app-dist.js"></script>
+    <script src="{% static 'js/app-dist.js' %}"></script>
   </body>
 </html>
