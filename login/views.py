@@ -9,8 +9,8 @@ from django.contrib.auth.models import User
  """
 def login_user(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+        username = request.POST['username']
+        password = request.POST['password']
 
         # Autenticar al usuario con las credenciales proporcionadas
         user = authenticate(request, username=username, password=password)
@@ -21,7 +21,7 @@ def login_user(request):
             if user.is_staff and user.is_superuser:
                 #el usuariio es un miembro del grupo moderador
                 print("redireccionando a controlBlog para moderador")
-                return redirect('controlBlog')
+                return redirect('moderadores')
         else:
             # El usuario no es autenticado, mostrar un mensaje de error
             messages.error(request, 'El nombre de usuario o contrseña no son correctos.')
