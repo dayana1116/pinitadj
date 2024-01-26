@@ -1,4 +1,4 @@
-""" from django.urls import path
+from django.urls import path
 from django.contrib.auth.decorators import login_required
 from login.views import login_user
 
@@ -12,4 +12,4 @@ urlpatterns =[
     path('listar', login_required (views.listar_Post), name='listar'),
     #path('editar_post/<int:post_id>/', editar_post, name='editar_post')
 
-] """
+]

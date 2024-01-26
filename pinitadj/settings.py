@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 from pathlib import Path
+from django.contrib.messages import constants as message_constantes
 """ from django.urls import reverse_lazys """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -44,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Index',
-    'moderador',
+    'moderadores',
     'login',
     'Fundacion',
     'registro',
@@ -60,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    
 ]
 
 ROOT_URLCONF = 'pinitadj.urls'
@@ -94,6 +97,9 @@ DATABASES = {
         'PASSWORD': 'tooR',
         'HOST': 'localhost',
         'PORT': '3306',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        }
     }
 }
 
@@ -115,6 +121,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+AUTH_USER_MODEL = 'auth.User'
+
 
 
 # Internationalization

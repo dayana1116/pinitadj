@@ -1,4 +1,4 @@
-""" from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect
 from django.contrib import messages
 from .forms import PostForm
 from django.http import JsonResponse
@@ -28,8 +28,7 @@ def create_Post(request):
 #listar los post
 def listar_Post(request):
     posts = Post.objects.all()
-    return render(request, 'controlBlog.html', {"post": posts})
+    return render(request, 'controlBlog.html', {"posts": posts})
 
 #operacion para modificar un post
 
- """

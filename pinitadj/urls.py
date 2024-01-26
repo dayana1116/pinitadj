@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include 
+from django.conf import settings
+from django.conf.urls.static import static
 #from django.contrib.auth.views import LoginView
 #, logout_then_login
 
@@ -23,7 +25,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Index.urls')),
-    path('moderador/',include('moderador.urls')),
+    path('moderadores/',include('moderadores.urls')),
     path('login/',include('login.urls')),
     path('fundacion/',include('Fundacion.urls')),
     path('registro/',include('registro.urls')),
@@ -32,3 +34,5 @@ urlpatterns = [
     #path('', LoginView.as_view(template_name='formlogin.html'), name='Login'),
     
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

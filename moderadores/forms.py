@@ -1,4 +1,4 @@
-""" from django import forms
+from django import forms
 from .models import Post
 
 class PostForm (forms.ModelForm):
@@ -9,8 +9,6 @@ class PostForm (forms.ModelForm):
         
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
-            self.fields['titulo','contenido','fecha','autor','extracto',].widget.attrs.update({"class": "form-control"})   
+               
 
 
- """
-   

@@ -1,8 +1,8 @@
-""" from django.db import models
+from django.db import models
 from django.template.defaultfilters import slugify
 
 # Create your models here.
-class Moderador(models.Model):
+class Moderadore(models.Model):
     idmoderador = models.IntegerField(primary_key=True)
     nombre = models.CharField(max_length=41)
     fechanacimiento = models.DateField(db_column='fechaNacimiento')  # Field name made lowercase.
@@ -16,7 +16,7 @@ class Moderador(models.Model):
 
     class Meta:
         managed = True
-        db_table = 'moderador'
+        db_table = 'moderadore'
 
 class Post(models.Model):
     idpost = models.IntegerField(primary_key=True)
@@ -35,4 +35,3 @@ class Post(models.Model):
     def __str__(self):
         return self.name
 
- """

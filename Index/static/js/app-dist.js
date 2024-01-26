@@ -4,13 +4,13 @@
 
 
 // esta funcion es para el modal de agregar un nuevo post
-function abrir_modal_agregar(url){
+/* function abrir_modal_agregar(url){
     $('#agregarpost').load(url, function(){
         $(this).modal('show');
     });
-}
+} */
 // esta funcion es para el modal de edicion
-function abrir_modal_edicion(url){
+/* function abrir_modal_edicion(url){
     $('#editar').load(url, function(){
         $(this).modal('show');
     });
@@ -23,4 +23,4 @@ function cerrar_modal_agregar(){
 
 function cerrar_modal_edicion(){
     $('#editar').modal('hide');
-}
+} */
