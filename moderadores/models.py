@@ -1,5 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.utils import timezone
 
 # Create your models here.
 class Moderadore(models.Model):
@@ -19,10 +20,10 @@ class Moderadore(models.Model):
         db_table = 'moderadore'
 
 class Post(models.Model):
-    idpost = models.IntegerField(primary_key=True)
+    idpost = models.AutoField(primary_key=True)
     titulo = models.CharField(max_length=110)
     contenido = models.CharField(max_length=5000)
-    fecha = models.DateField()
+    fecha = models.DateField(default=timezone.now)
     autor = models.CharField(max_length=80)
     extracto = models.CharField(max_length=400)
     

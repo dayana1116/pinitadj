@@ -21,7 +21,7 @@ def login_user(request):
             if user.is_staff and user.is_superuser:
                 #el usuariio es un miembro del grupo moderador
                 print("redireccionando a controlBlog para moderador")
-                return redirect('moderadores')
+                return redirect('listar')
         else:
             # El usuario no es autenticado, mostrar un mensaje de error
             messages.error(request, 'El nombre de usuario o contrseña no son correctos.')

@@ -2,7 +2,8 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from .forms import PostForm
 from django.http import JsonResponse
-#from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
 from .models import Post
 
 def moderador(request):
@@ -29,6 +30,38 @@ def create_Post(request):
 def listar_Post(request):
     posts = Post.objects.all()
     return render(request, 'controlBlog.html', {"posts": posts})
+    
+
 
 #operacion para modificar un post
+def update_post(request, idpost): #obtener los datos del post mediante el id
+    post = get_object_or_404(Post, idpost=idpost)
+    if request.method == 'POST': #revisa si la solicitud es post y puede enviar los nuevos datos
+        form = PostForm(request.POST, instance=post) #se crea el formulario para la validacion
+        if form.is_valid():
+            form.save()#si son validos se guardan 
+            data = {'message': 'Datos actualizados correctamente'} 
+            return redirect('listar') #se regresa al la pagina donde estan los post
+        else:
+            data = {'error': 'Error al actualizar datos. Revise los datos.'}
+            return JsonResponse(data)
+    else:
+        data = {
+            'titulo':post.titulo,
+            
+        }
+        
+        return JsonResponse(data)#toma los datos almacenado y los envia  a donde se ralizo la solicitud
+
+@csrf_exempt # desactiva la protección CSRF para que se pueda eliminar registros
+def delete_post(request, idpost):
+    if request.method == 'POST':
+        try:
+            post = get_object_or_404(Post, idpost=idpost) 
+            post.delete()
+            return JsonResponse({'message': 'Post eliminado correctamente'})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)#error en el servidor
+    else:
+        return JsonResponse({'error': 'Método no permitido'}, status=403)
 

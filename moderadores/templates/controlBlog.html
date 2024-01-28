@@ -2,206 +2,225 @@
 {% load static %}
 
 {% block content%}
-    <div class="content blog content">
-      <div class="content blog content-inicio">
-        <p>Moderador</p>
-        <div class="content blog content-inicio-box"> 
-          <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#agregarpost">Nuevo Post<img src="{% static 'css/images/icono/nuevopost.svg' %}" alt="Nuevo post"/></button>
-        </div>
+  <div class="content blog content">
+    <div class="content blog content-inicio">
+      <p>Moderador</p>
+      <div class="content blog content-inicio-box"> 
+        <!--este es el boton para abrir el modal de agregar un nuevo post-->
+        <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#agregarpost">Nuevo Post<img src="{% static 'css/images/icono/nuevopost.svg' %}" alt="Nuevo post"/></button>
       </div>
-      <div class="modal fade modal fade" id="agregarpost" tabindex="-1" aria-labelledby="modalComedorLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo post</h1>
-              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-              <form  method="POST" action="{% url 'create' %}" enctype="multipart/form-data" accept-charset="utf-8">
-                {% csrf_token %}
-                <div class="content__form__box">
-                  <label class="content__form__box-label" for="titulo">T&iacute;tulo: </label>
-                  <textarea class="content__form__box-input" type="text" placeholder="Ingrese el título del Post" name="titulo" required="" maxlength="120"></textarea>
-                </div>
-                <div class="content__form__box">
-                  <label class="content__form__box-label" for="contenido">Contenido: </label>
-                  <textarea class="content__form__box-input" placeholder="Ingrese el contenido del Post" wrap="soft" maxlength="5000" name="contenido"></textarea>
-                </div>
-                <div class="content__form__box">
-                  <label class="content__form__box-label" for="extracto">Extracto: </label>
-                  <textarea class="content__form__box-input" placeholder="Ingrese un extracto del post" required="" rows="5" maxlength="180" name="extracto"></textarea>
-                </div>
-                <input id="hidden" type="hidden" name="oculto" value="1"/>
-                <div class="content__form__box">  </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-danger btn-lg" data-bs-dismiss="modal"  onclick="cerrar_modal_agregar">Cancelar</button>
-              <button class="btn btn-primary btn-lg" type="submit" data-bs-toggle="modal" data-bs-target="#">Postear</button>
-            </div>
+    </div>
+    <div class="modal fade modal fade" id="agregarpost" tabindex="-1" aria-labelledby="modalagregarpostLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="agregarpostLabel">Nuevo post</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
-        </div>
-      </div>
-      <div class="content_blog content-inicio-box-tabs">
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="usuario-tab-pane" role="tabpanel" aria-labelledby="usuario-tab" tabindex="0"> 
-            <div class="content_blog contnet-inicio-box-tabs-item">
-              <div class="content_blog contnet-inicio-box-tabs-item-cuerpo">
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/><a href="busqueda.html"> 
-                    <div class="btn btn-dark btn-lg" type="submit">Buscar</div></a>
-                  <input class="btn-clean btn-lg" id="azul" type="reset" value="Limpiar"/>
-                </form>
+          <div class="modal-body">
+            <form  method="POST" action="{% url 'create' %}"  accept-charset="utf-8">
+              {% csrf_token %}
+              <div class="content__form__box">
+                <label class="content__form__box-label" for="titulo">T&iacute;tulo: </label>
+                <textarea class="content__form__box-input" type="text" placeholder="Ingrese el título del Post" name="titulo" id="titulo" required="" maxlength="120"></textarea>
               </div>
-              <div class="content_blog contnet-inicio-box-tabs-item-cuerpo-control">
-                <div class="table-wrapper contnet-inicio-box-tabs-item-cuerpo-control__table">
-                  <table class="table table-striped table-hover">
-                    <thead> 
-                      <tr>                 
-                        <th>Id</th>
-                        <th>Titulo</th>
-                        <th>Fecha</th>
-                      </tr>
-                    </thead>
-                    <tbody> 
-                      {% for post in posts %}
-                      <tr id="fila_id_{{ post.id_post }}">
-                        <td>{{ post.id_post}}</td>
-                        <td>{{ post.titulo}}</td>
-                        <td>{{ post.fecha}}</td>
-                      
-                          <button class="btn btn-primary btn-lg" id="modificar" type="button" data-bs-toggle="modal" data-bs-target="#editar"> <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254; </i></button>
-                          <div class="modal fade modal fade" id="editar" tabindex="-1" aria-labelledby="modalComedorLabel">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="editar">Modificar Post</h1>
-                                  <button class="btn-close" type="button" data-bs-dismiss="modal" onclick="abrir_modal_edicion"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body">
-                                  <form  id="formulario"  method="POST" enctype="multipart/form-data" accept-charset="utf-8">
-                                    <div class="content__form__box">
-                                      <label class="content__form__box-label" for="titulo">T&iacute;tulo: </label>
-                                      <textarea class="content__form__box-input" type="text" placeholder="Ingrese el título del Post" name="titulo" required="" maxlength="120"></textarea>
-                                    </div>
-                                    <div class="content__form__box">
-                                      <label class="content__form__box-label" for="extracto">Extracto: </label>
-                                      <textarea class="content__form__box-input" placeholder="Ingrese un extracto del post" required="" rows="5" maxlength="180" name="extracto"></textarea>
-                                    </div>
-                                    <div class="content__form__box">
-                                      <label class="content__form__box-label" for="contenido">Contenido: </label>
-                                      <textarea class="content__form__box-input" placeholder="Ingrese el contenido del Post" wrap="soft" maxlength="5000" name="contenido"></textarea>
-                                    </div>
-                                    <input id="hidden" type="hidden" name="oculto" value="1"/>
-                                    <div class="content__form__box">  </div>
-                                  </form>
-                                </div>
-                                <div class="modal-footer">
-                                  <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" onclick="abrir_modal_edicion">Cancelar</button>
-                                  <button class="btn btn-primary btn-lg" type="submit" data-bs-toggle="modal" data-bs-target="#">Postear  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <button class="btn btn-primary" id="eliminar" type="button" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
-                          <div class="modal fade modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="modaleliminar">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="eliminarModalLabel">
-                                    <Strong>Atencion</Strong> 
-                                  </h1>
-                                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body">
-                                  <p>¿Estás seguro de eliminar el registro del POS?</p>
-                                </div>
-                                <div class="modal-footer">
-                                  <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                                  <button class="btn btn-primary btn-lg" type="submit" data-bs-toggle="modal" data-bs-target="#modaleliminar">Confirmar                                   </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      {% endfor %}
-                      <tr> 
-                        <td>02</td>
-                        <td>cliente 2</td>
-                        <td>23/octubre/2023</td>
-                        <td> </td>
-                        <td>
-                          <button class="btn btn-primary btn-lg" id="modificar" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254; </i></button>
-                          <div class="modal fade modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalComedorLabel">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo post</h1>
-                                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body">
-                                  <form class="content__form form_insert_post" id="formulario" action="insert_post.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
-                                    <div class="content__form__box">
-                                      <label class="content__form__box-label" for="txtTitulo">T&iacute;tulo: </label>
-                                      <textarea class="content__form__box-input" type="text" placeholder="Ingrese el título del Post" name="titulo" required="" maxlength="120"></textarea>
-                                    </div>
-                                    <div class="content__form__box">
-                                      <label class="content__form__box-label" for="txtExtracto">Extracto: </label>
-                                      <textarea class="content__form__box-input" placeholder="Ingrese un extracto del post" required="" rows="5" maxlength="180" name="extracto"></textarea>
-                                    </div>
-                                    <div class="content__form__box">
-                                      <label class="content__form__box-label" for="txtContenido">Contenido: </label>
-                                      <textarea class="content__form__box-input" placeholder="Ingrese el contenido del Post" wrap="soft" maxlength="5000" name="contenido"></textarea>
-                                    </div>
-                                    <input id="hidden" type="hidden" name="oculto" value="1"/>
-                                    <div class="content__form__box">  </div>
-                                  </form>
-                                </div>
-                                <div class="modal-footer">
-                                  <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                                  <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#">Postear </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <button class="btn btn-primary" id="eliminar" type="button" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
-                          <div class="modal fade modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="modaleliminar">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="eliminarModalLabel">Confirmacion</h1>
-                                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                </div>
-                                <div class="modal-body">
-                                  <p>En pocas cosas se puede invertir </p>
-                                </div>
-                                <div class="modal-footer">
-                                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modaleliminar">Registrate como voluntaro</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="content__form__box">
+                <label class="content__form__box-label" for="contenido">Contenido: </label>
+                <textarea class="content__form__box-input" placeholder="Ingrese el contenido del Post" wrap="soft" maxlength="5000" id="contenido" name="contenido"></textarea>
               </div>
-              <div class="content_Ctrlblog_footer">
-                <nav aria-label="...">
-                  <ul class="pagination">
-                    <li class="page-item disabled"></li><a class="page-link">Previous</a>
-                    <li class="page-item"></li><a class="page-link" href="#">1</a>
-                    <li class="page-item active" aria-current="page"></li><a class="page-link" href="#">2</a>
-                    <li class="page-item"></li><a class="page-link" href="#">3</a>
-                    <li class="page-item"></li><a class="page-link" href="#">Next   </a>
-                  </ul>
-                </nav>
+              <div class="content__form__box">
+                <label class="content__form__box-label" for="extracto">Extracto: </label>
+                <textarea class="content__form__box-input" placeholder="Ingrese un extracto del post" required="" rows="5" maxlength="180" id="extracto" name="extracto"></textarea>
               </div>
-            </div>
+              {% if messages %}
+              <div class="row">
+                  {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}" role="alert">
+                      <p>{{ message }}</p>
+                  </div>
+                  {% endfor %}
+              </div>
+              {% endif %}
+              <!--<input id="hidden" type="hidden" name="oculto" value="1"/>-->
+              <div class="content__form__box"></div>
+              <div class="modal-footer">
+              <button class="btn btn-danger btn-lg" data-bs-dismiss="modal"  aria-label="Close">Cancelar</button>
+              <button class="btn btn-primary btn-lg" type="submit" data-bs-toggle="modal" data-bs-target="#modalpost">Postear </button>           
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    {% endblock%}
+    <div class="modal fade" id="modalpost" aria-hidden="true" aria-labelledby="modalpost" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="modalpost">Nuevo postt </h3>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Post creado!</div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#modalpost" data-bs-toggle="modal"
+              data-bs-dismiss="modal">Cancelar </button>
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content_blog contnet-inicio-box-tabs-item-cuerpo-control">
+    <table class="display" id="myTable" cellspacing="0" >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Titulo</th>
+          <th>Fecha</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in posts %} <!---bucle de cliente en cliente-->
+        <tr id="fila_id_{{post.idpost}}"> <!---id para la fila de la tabla-->
+          <!---se accede a los datos almacenados en la base de datos-->
+          <td>{{ post.idpost}} </td>
+          <td>{{ post.titulo}} </td>
+          <td>{{ post.fecha}} </td>
+          <td>
+            <a href="{% url 'editar_post' post.idpost %}" data-bs-toggle="modal"
+              data-id="{{ post.idpost }}" data-bs-target="#modalEditar" title="Modificar">
+            <button class="btn btn-link newBtnElement" type="button">Ver mas </button></a>
+          </td>
+          <td><a href="{% url 'editar_post' post.idpost %}" data-bs-toggle="modal"
+              data-id="{{ post.idpost }}" data-bs-target="#modalEditar" title="Modificar"> <i
+                class="bi bi-pencil-square"></i></a>
+            <a href="{% url 'eliminar_post' post.idpost %}" data-bs-toggle="modal"
+              data-bs-target="#modalEliminar" data-id="{{ post.idpost }}" title="Eliminar"> <i
+                class="bi bi-trash3-fill"></i></a></td>
+        </tr>
+        {% endfor %}
+        <div class="modal-modificar-post">
+          <div class="modal" id="modalEditar" aria-hidden="true" aria-labelledby="modalEditarLabel" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="modalEditarLabel">Modificar <strong>Post</strong></h2>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="content-form">
+                    <form action="#" id="editarPostForm" method="POST">
+                      {% csrf_token %}
+                      <div class="content__form__box">
+                          <label class="content__form__box-label" for="titulo">T&iacute;tulo: </label>
+                          <textarea class="content__form__box-input" type="text" placeholder="Ingrese el título del Post" name="titulo" id="titulo" required="" maxlength="120"></textarea>
+                        </div>
+                        <div class="content__form__box">
+                          <label class="content__form__box-label" for="contenido">Contenido: </label>
+                          <textarea class="content__form__box-input" placeholder="Ingrese el contenido del Post" wrap="soft" maxlength="5000" id="contenido" name="contenido"></textarea>
+                        </div>
+                        <div class="content__form__box">
+                          <label class="content__form__box-label" for="extracto">Extracto: </label>
+                          <textarea class="content__form__box-input" placeholder="Ingrese un extracto del post" required="" rows="5" maxlength="180" id="extracto" name="extracto"></textarea>
+                        </div>
+                        <div class="content__form__box"></div>
+                        <button class="btn btn-danger btn-lg" data-bs-dismiss="modal"  onclick="cerrar_modal_agregar">Cancelar</button>
+                        <button class="btn btn-primary btn-lg" type="submit" data-bs-toggle="modal" data-bs-target="#">Postear </button>           
+                        </div>
+                  <div class="modal-body__buttons">
+                    <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                    <button class="btn btn-success" data-bs-toggle="modal"
+                      data-bs-dismiss="modal">Guardar</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="modalEliminar" aria-hidden="true" aria-labelledby="modalEliminarLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalEliminarModalLabel">Eliminar</h5>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">¿Estas seguro que desdeas eliminar?</div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#modalEliminar" data-bs-toggle="modal"
+                    data-bs-dismiss="modal">Cancelar </button>
+                  <button id="confirmarEliminar" class="btn btn-secondary" type="button"
+                    data-bs-dismiss="modal">Aceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </tbody>
+      <script>
+        $(document).ready(function () {
+          $('#myTable').DataTable();
+        });
+        $('a[data-bs-toggle="modal"]').on('click', function () {
+          var targetModalId = $(this).data('bs-target');
+          var idpost = $(this).data('id');
+
+          if (targetModalId === '#modalEliminar') {
+            $('#confirmarEliminar').data('id', idpost);
+          } else {
+            $.ajax({
+              url: '{% url "editar_post" idpost=0 %}'.replace('0', idpost),
+              type: 'GET',
+              data: {
+                'idpost': idpost
+              },
+              success: function (data) {
+                $('#editarPostForm').attr('action', '{% url "editar_post" idpost=0 %}'.replace('0',
+                  idpost));
+                $('#nombre2').val(data.nombre);
+              },
+              error: function (xhr, status, error) {
+                console.error('Error al cargar la información del registro:', error);
+                alert('Error al cargar la información del registro.');
+              }
+            });
+          }
+        });
+
+        $('#confirmarEliminar').on('click', function () {
+          var idpost = $(this).data('id');
+
+          if (idpost !== undefined) {
+            $.ajax({
+              url: '{% url "eliminar_post" idpost=0 %}'.replace('0', idpost),
+              type: 'POST',
+              dataType: 'json',
+              data: {
+                'idpost': idpost
+              },
+              success: function (response) {
+                console.log('Respuesta del servidor:', response);
+                alert('Registro eliminado correctamente');
+                // Cerrar el modal después de la eliminación
+                $('#modalEliminar').modal('hide');
+                // Eliminar la fila correspondiente de la tabla
+                var table = $('#myTable').DataTable();
+                table.row('#fila_id_' + idpost).remove().draw();
+              },
+              error: function (xhr, status, error) {
+                console.error('Error al eliminar el registro:', error);
+                alert('Error al eliminar el registro.');
+              }
+            });
+          } else {
+            console.error('ID de cliente no definido al intentar eliminar el registro.');
+            alert('Error al eliminar el registro: ID no definido.');
+          }
+        });
+      </script>
+    </table>
+    </div>
+  </div> 
+  
+    
+{% endblock%}
