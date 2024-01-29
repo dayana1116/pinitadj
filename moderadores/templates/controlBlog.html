@@ -21,16 +21,16 @@
             <form  method="POST" action="{% url 'create' %}"  accept-charset="utf-8">
               {% csrf_token %}
               <div class="content__form__box">
-                <label class="content__form__box-label" for="titulo">T&iacute;tulo: </label>
-                <textarea class="content__form__box-input" type="text" placeholder="Ingrese el título del Post" name="titulo" id="titulo" required="" maxlength="120"></textarea>
+                <label class="content__form__box-label" for="titulo1">T&iacute;tulo: </label>
+                <textarea class="content__form__box-input" type="text" placeholder="Ingrese el título del Post" name="titulo" id="titulo1" required="" maxlength="120"></textarea>
               </div>
               <div class="content__form__box">
-                <label class="content__form__box-label" for="contenido">Contenido: </label>
-                <textarea class="content__form__box-input" placeholder="Ingrese el contenido del Post" wrap="soft" maxlength="5000" id="contenido" name="contenido"></textarea>
+                <label class="content__form__box-label" for="contenido1">Contenido: </label>
+                <textarea class="content__form__box-input" placeholder="Ingrese el contenido del Post" wrap="soft" maxlength="5000" id="contenido1" name="contenido"></textarea>
               </div>
               <div class="content__form__box">
-                <label class="content__form__box-label" for="extracto">Extracto: </label>
-                <textarea class="content__form__box-input" placeholder="Ingrese un extracto del post" required="" rows="5" maxlength="180" id="extracto" name="extracto"></textarea>
+                <label class="content__form__box-label" for="extracto1">Extracto: </label>
+                <textarea class="content__form__box-input" placeholder="Ingrese un extracto del post" required="" rows="5" maxlength="180" id="extracto1" name="extracto"></textarea>
               </div>
               {% if messages %}
               <div class="row">
@@ -87,59 +87,47 @@
           <td>{{ post.idpost}} </td>
           <td>{{ post.titulo}} </td>
           <td>{{ post.fecha}} </td>
-          <td>
-            <a href="{% url 'editar_post' post.idpost %}" data-bs-toggle="modal"
-              data-id="{{ post.idpost }}" data-bs-target="#modalEditar" title="Modificar">
-            <button class="btn btn-link newBtnElement" type="button">Ver mas </button></a>
-          </td>
-          <td><a href="{% url 'editar_post' post.idpost %}" data-bs-toggle="modal"
-              data-id="{{ post.idpost }}" data-bs-target="#modalEditar" title="Modificar"> <i
-                class="bi bi-pencil-square"></i></a>
-            <a href="{% url 'eliminar_post' post.idpost %}" data-bs-toggle="modal"
-              data-bs-target="#modalEliminar" data-id="{{ post.idpost }}" title="Eliminar"> <i
-                class="bi bi-trash3-fill"></i></a></td>
+          <td> <a href="{% url 'editar_post' post.idpost %}" data-id="{{post.idpost }}"  data-bs-toggle="modal" data-bs-target="#modalEditar" title="Modificar">
+             <i class="bi bi-pencil-square"></i></a></td>
+          <td> <a href="{% url 'eliminar_post' post.idpost %}" data-id="{{post.idpost }}" data-bs-toggle="modal" data-bs-target="#modalEliminar" title="Eliminar"> 
+            <i class="bi bi-trash3-fill"></i></a></td>
         </tr>
         {% endfor %}
-        <div class="modal-modificar-post">
-          <div class="modal" id="modalEditar" aria-hidden="true" aria-labelledby="modalEditarLabel" tabindex="-1">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h2 class="modal-title" id="modalEditarLabel">Modificar <strong>Post</strong></h2>
-                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="content-form">
-                    <form action="#" id="editarPostForm" method="POST">
-                      {% csrf_token %}
-                      <div class="content__form__box">
-                          <label class="content__form__box-label" for="titulo">T&iacute;tulo: </label>
-                          <textarea class="content__form__box-input" type="text" placeholder="Ingrese el título del Post" name="titulo" id="titulo" required="" maxlength="120"></textarea>
-                        </div>
-                        <div class="content__form__box">
-                          <label class="content__form__box-label" for="contenido">Contenido: </label>
-                          <textarea class="content__form__box-input" placeholder="Ingrese el contenido del Post" wrap="soft" maxlength="5000" id="contenido" name="contenido"></textarea>
-                        </div>
-                        <div class="content__form__box">
-                          <label class="content__form__box-label" for="extracto">Extracto: </label>
-                          <textarea class="content__form__box-input" placeholder="Ingrese un extracto del post" required="" rows="5" maxlength="180" id="extracto" name="extracto"></textarea>
-                       <!-- </div>
-                        <div class="content__form__box"></div>
-                        <button class="btn btn-danger btn-lg" data-bs-dismiss="modal"  onclick="cerrar_modal_agregar">Cancelar</button>
-                        <button class="btn btn-primary btn-lg" type="submit" data-bs-toggle="modal" data-bs-target="#">Postear </button>           
-                        </div>-->
-                  <div class="modal-body__buttons">
-                    <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                    <button class="btn btn-success btn-lg" data-bs-toggle="modal"
-                      data-bs-dismiss="modal">Postear</button>
+          <div class="modal-post">
+            <div class="modal fade" id="modalEditar" aria-hidden="true" aria-labelledby="modalEditarLabel" tabindex="-1">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title" id="modalEditarLabel">Modificar <strong>Post</strong></h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  </form>
+                  <div class="modal-body">
+                    <div class="content-form">
+                      <form action="#" id="editarPostForm2" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="content__form__box">
+                            <label class="content__form__box-label" for="titulo2">T&iacute;tulo: </label>
+                            <textarea class="content__form__box-input" type="text" placeholder="Ingrese el título del Post" name="titulo" id="titulo2" required="" maxlength="120"></textarea>
+                          </div>
+                          <div class="content__form__box">
+                            <label class="content__form__box-label" for="contenido2">Contenido: </label>
+                            <textarea class="content__form__box-input" placeholder="Ingrese el contenido del Post" wrap="soft" maxlength="5000" id="contenido2" name="contenido"></textarea>
+                          </div>
+                          <div class="content__form__box">
+                            <label class="content__form__box-label" for="extracto2">Extracto: </label>
+                            <textarea class="content__form__box-input" placeholder="Ingrese un extracto del post" required="" rows="5" maxlength="180" id="extracto2" name="extracto"></textarea>
+                          <div class="modal-body__buttons">
+                            <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                            <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-dismiss="modal">Postear</button>
+                          </div>
+                        </div>
+                      </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal fade" id="modalEliminar" aria-hidden="true" aria-labelledby="modalEliminarLabel"
-            tabindex="-1">
+          <div class="modal fade" id="modalEliminar" aria-hidden="true" aria-labelledby="modalEliminarLabel" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
@@ -148,15 +136,14 @@
                 </div>
                 <div class="modal-body">¿Estas seguro que desdeas eliminar?</div>
                 <div class="modal-footer">
-                  <button class="btn btn-primary" data-bs-target="#modalEliminar" data-bs-toggle="modal"
-                    data-bs-dismiss="modal">Cancelar </button>
-                  <button id="confirmarEliminar" class="btn btn-secondary" type="button"
-                    data-bs-dismiss="modal">Aceptar</button>
+                  <button class="btn btn-primary" data-bs-target="#modalEliminar" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
+                  <button id="confirmarEliminar" class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
                 </div>
               </div>
             </div>
           </div>
-      </tbody>
+          </div>
+        </tbody>
       <script>
         $(document).ready(function () {
           $('#myTable').DataTable();
@@ -165,20 +152,23 @@
           var targetModalId = $(this).data('bs-target');
           var idpost = $(this).data('id');
 
+          // verifica si es el modal de eliminacion
           if (targetModalId === '#modalEliminar') {
             $('#confirmarEliminar').data('id', idpost);
           } else {
+            
             $.ajax({
               url: '{% url "editar_post" idpost=0 %}'.replace('0', idpost),
               type: 'GET',
-              data: {
-                'idpost': idpost
-              },
+              data: {'idpost': idpost},
               success: function (data) {
-                $('#editarPostForm').attr('action', '{% url "editar_post" idpost=0 %}'.replace('0',
-                  idpost));
-                $('#titulo').val(data.titulo);
+                $('#editarPostForm2').attr('action', '{% url "editar_post" idpost=0 %}'.replace('0', idpost));
+                $('#titulo2').val(data.titulo);
+                $('#contenido2').val(data.contenido);
+                $('#extracto2').val(data.extracto);
               },
+              
+              
               error: function (xhr, status, error) {
                 console.error('Error al cargar la información del registro:', error);
                 alert('Error al cargar la información del registro.');
@@ -189,15 +179,14 @@
 
         $('#confirmarEliminar').on('click', function () {
           var idpost = $(this).data('id');
+          console.log('ID del producto a eliminar:', idpost);
 
           if (idpost !== undefined) {
             $.ajax({
               url: '{% url "eliminar_post" idpost=0 %}'.replace('0', idpost),
               type: 'POST',
               dataType: 'json',
-              data: {
-                'idpost': idpost
-              },
+              data: {'idpost': idpost},
               success: function (response) {
                 console.log('Respuesta del servidor:', response);
                 alert('Registro eliminado correctamente');
@@ -213,7 +202,7 @@
               }
             });
           } else {
-            console.error('ID de cliente no definido al intentar eliminar el registro.');
+            console.error('ID de post no definido al intentar eliminar el registro.');
             alert('Error al eliminar el registro: ID no definido.');
           }
         });

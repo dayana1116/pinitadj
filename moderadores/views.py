@@ -37,8 +37,10 @@ def listar_Post(request):
 def update_post(request, idpost): #obtener los datos del post mediante el id
     post = get_object_or_404(Post, idpost=idpost)
     if request.method == 'POST': #revisa si la solicitud es post y puede enviar los nuevos datos
-        form = PostForm(request.POST, instance=post) #se crea el formulario para la validacion
+        form = PostForm(request.POST,request.FILES, instance=post) #se crea el formulario para la validacion
         if form.is_valid():
+            post_instance = form.save(commit=False)
+            post_instance.save()
             form.save()#si son validos se guardan 
             data = {'message': 'Datos actualizados correctamente'} 
             return redirect('listar') #se regresa al la pagina donde estan los post
@@ -48,6 +50,8 @@ def update_post(request, idpost): #obtener los datos del post mediante el id
     else:
         data = {
             'titulo':post.titulo,
+            'contenido':post.contenido,
+            'extracto':post.extracto,
             
         }
         
@@ -55,13 +59,9 @@ def update_post(request, idpost): #obtener los datos del post mediante el id
 
 @csrf_exempt # desactiva la protección CSRF para que se pueda eliminar registros
 def delete_post(request, idpost):
-    if request.method == 'POST':
-        try:
+    
             post = get_object_or_404(Post, idpost=idpost) 
             post.delete()
             return JsonResponse({'message': 'Post eliminado correctamente'})
-        except Exception as e:
-            return JsonResponse({'error': str(e)}, status=500)#error en el servidor
-    else:
-        return JsonResponse({'error': 'Método no permitido'}, status=403)
+        
 
