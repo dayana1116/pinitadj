@@ -174,32 +174,18 @@
           </div>
         </div>
         <div class="content__section-nuestrafundacion-blog"> 
-          <h1>Nuestro Blog   </h1>
+          <h1>Nuestro Blog</h1>
           <div class="content__section-nuestrafundacion-blog-principal">
+          {% for post in posts %}
             <div class="content__section-nuestrafundacion-blogimg">
-              <p>Titulo del post</p><img id="fotopost" src="{% static 'css/images/Mobile/itemsCircle_1-600x600.jpg'%}" alt="img post"/>
+              <p>{{ post.titulo }}</p>
               <div class="content__section-nuestrafundacion-blogimg-box">
-                <p><strong>Autor</strong> Dayana ornelas</p>
-                <p><strong>Fecha</strong> 10/10/2023</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem natus impedit placeat, voluptas quia voluptates maiores eum aperiam nesciunt beatae quis explicabo labore incidunt atque enim non cumque neque et. <a href="single.html" target="blank">ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></a></p>
+                <p><strong>Fecha</strong> {{ post.fecha }}</p>
+                <p>{{ post.contenido }}</p>
+                <p> <a href="{% url 'single_post' post.id %}" target="blank">ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></a></p>
               </div>
             </div>
-            <div class="content__section-nuestrafundacion-blogimg">
-              <p>Titulo del post</p><img id="fotopost" src="{% static 'css/images/Mobile/itemsCircle_1-600x600.jpg'%}" alt="img post"/>
-              <div class="content__section-nuestrafundacion-blogimg-box">
-                <p><strong>Autor</strong> Dayana ornelas</p>
-                <p><strong>Fecha</strong> 11/10/2023</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem natus impedit placeat, voluptas quia voluptates maiores eum aperiam nesciunt beatae quis explicabo labore incidunt atque enim non cumque neque et. <a href="single.html" target="blank">ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></a></p>
-              </div>
-            </div>
-            <div class="content__section-nuestrafundacion-blogimg">
-              <p>Titulo del post</p><img id="fotopost" src="{% static 'css/images/Mobile/itemsCircle_1-600x600.jpg'%}" alt="img post"/>
-              <div class="content__section-nuestrafundacion-blogimg-box">
-                <p><strong>Autor</strong> Dayana ornelas</p>
-                <p><strong>Fecha</strong> 11/10/2023</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem natus impedit placeat, voluptas quia voluptates maiores eum aperiam nesciunt beatae quis explicabo labore incidunt atque enim non cumque neque et. <a href="single.html" target="blank">ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svg' %}" alt="logo de flecha"/></a></p>
-              </div>
-            </div>
+          {% endfor %}
           </div>
         </div>
       </div>

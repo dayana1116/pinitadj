@@ -9,7 +9,6 @@ from .models import Post
 def moderador(request):
     return render(request,'controlBlog.html') 
 
-
 # Create your views here.
 def create_Post(request):
     if request.method == 'POST':
@@ -63,5 +62,7 @@ def delete_post(request, idpost):
             post = get_object_or_404(Post, idpost=idpost) 
             post.delete()
             return JsonResponse({'message': 'Post eliminado correctamente'})
+
+
         
 
