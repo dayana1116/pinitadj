@@ -1,6 +1,8 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.utils import timezone
+from django.contrib.auth.models import User
+from django.core.validators import MinLengthValidator
 
 # Create your models here.
 class Moderadore(models.Model):
@@ -21,11 +23,11 @@ class Moderadore(models.Model):
 
 class Post(models.Model):
     idpost = models.AutoField(primary_key=True)
-    titulo = models.CharField(max_length=110)
-    contenido = models.CharField(max_length=5000)
+    titulo = models.CharField(max_length=110, validators=[MinLengthValidator(1)])
+    contenido = models.CharField(max_length=5000, validators=[MinLengthValidator(1)])
     fecha = models.DateField(default=timezone.now)
-    autor = models.CharField(max_length=80)
-    extracto = models.CharField(max_length=400)
+    autor = models.CharField(max_length=80, blank=True) # Permitir autor vacío
+    extracto = models.CharField(max_length=400, validators=[MinLengthValidator(1)])
     
 
 

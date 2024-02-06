@@ -585,7 +585,7 @@
     display: -ms-flexbox;
     display: flex;
     background-repeat: no-repeat;
-    background-image: url(../images/Mobile/mobileSlide_somos-722x1048.jpg);
+    background-image: url(./images/Mobile/mobileSlide_somos-722x1048.jpg);
     background-size: cover;
     width: auto;
     height: 400px;
@@ -687,7 +687,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-image: url(../images/Mobile/mobileItemMision480x520.jpg);
+    background-image: url(./images/Mobile/mobileItemMision480x520.jpg);
     background-size: cover;
     width: auto;
     height: 480px;
@@ -766,7 +766,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-image: url(../images/Mobile/mobileItemVision480x520.jpg);
+    background-image: url(./images/Mobile/mobileItemVision480x520.jpg);
     background-size: cover;
     width: auto;
     height: 480px;
@@ -990,7 +990,7 @@
   .content.blog.content-inicio p {
     color: black;
     font-size: 3rem;
-    text-align: center;
+    text-align: end;
     border-bottom: 2px solid #3DAEED;
     margin-bottom: 5%;
   }
@@ -1100,17 +1100,37 @@
     background-color: #f2f2f2;
     font-size: 1.4rem;
   }
-  
+  .contnet-inicio-box-tabs-item-cuerpo-control{
+    overflow: auto;
+    margin: 10px;
+  }
   th, td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    before{
+      color: red;
+    }
   }
   
   tr:hover {
     background-color: #f5f5f5;
   }
-  
+  td{
+    font-size: 1.2rem;
+    .bi-trash3-fill::before{
+      color: red;
+      font-size: 20px;
+    }
+    .bi-pencil-square::before{
+      color: #fcaf00;
+      font-size: 20px;
+
+    }
+  }
+  ¨.dataTables_info{
+    font-size: 1.2rem;
+  }
   th {
     background-color: #4CAF50;
     color: white;

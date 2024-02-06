@@ -7,11 +7,9 @@ def index(request):
     return render(request, 'index.html')
 
 # esta funcion sirve para mostrar los post la parte del blogpost en la parte de la interfaz para el usuario
-def vista_post(request,idpost):
-    ##posts = Post.objects.all()  # Obtener todos los posts de la base de datos
-
-    post = Post.objects.filter(idpost=idpost).first()
-    return render(request, 'index.html', {'posts': post})
+def vista_post(request, idpost):
+    post = Post.objects.get(id=idpost)  # Obtener el post específico según su id
+    return render(request, 'index.html', {'posts': [post]})
 
 # con esta funcion se visualizara solo un id del post
 def single_post(request, post_id):

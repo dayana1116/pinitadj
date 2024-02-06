@@ -1,33 +1,4 @@
-$(document).ready(function() {
-    $('#myTable').DataTable();
-    
-    // Script para inicializar tooltips 
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-    });
 
-    $('a[data-bs-toggle="modal"]').on('click', function () {
-    var targetModalId = $(this).data('bs-target');
-    var idpost = $(this).data('id');
-
-    $('#listar_post').click(function () {
-        $('form').submit(); // Envía el formulario
-    });
-
-    /* document.addEventListener("DOMContentLoaded", function() {
-        const postearBtn = document.getElementById("postearBtn");
-      
-        postearBtn.addEventListener("click", function(event) {
-          event.preventDefault(); // Prevent the form from submitting normally
-      
-          // Your custom logic here, e.g., validation, AJAX request, etc.
-      
-          // Example: Display a success message
-          alert("Post submitted successfully!");
-        });
-      }); */
-    });
-});
 /* var createPostUrl = "{% url 'create_Post' %}";
 
 console.log("URL generada:", createPostUrl);

@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from .models import Post
 
+
 def moderador(request):
     return render(request,'controlBlog.html') 
 

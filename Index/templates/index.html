@@ -9,7 +9,8 @@
             <div class="carousel-item active">
               <picture class="carousel-item__img">
                 <source media="(min-width:1110px)" srcset="{% static 'css/images/Desktop/desktopSlides_1-1920x466.jpg' %}"/>
-                <source media="(min-width:768px)" srcset="{% static 'css/images/Tablet/tabletSlides_2-1110x466.jpg' %}"/><img class="d-block w-100" src="{% static 'css/images/Mobile/mobileSlide_2-722x1048.jpg' %}" alt="Imagen de inicio"/>
+                <source media="(min-width:768px)" srcset="{% static 'css/images/Tablet/tabletSlides_2-1110x466.jpg' %}"/>
+                <img class="d-block w-100" src="{% static 'css/images/Mobile/mobileSlide_2-722x1048.jpg' %}" alt="Imagen de inicio"/>
               </picture>
               <div class="slideContent"> 
                 <p>Fundación</p>
@@ -186,8 +187,9 @@
               </div>
             </div>
           {% endfor %}
-          </div>
         </div>
       </div>
     </div>
-    {% endblock%}
+  </div>
+  
+{% endblock%}
