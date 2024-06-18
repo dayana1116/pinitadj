@@ -177,16 +177,16 @@
         <div class="content__section-nuestrafundacion-blog"> 
           <h1>Nuestro Blog</h1>
           <div class="content__section-nuestrafundacion-blog-principal">
-          {% for post in posts %}
+          
             <div class="content__section-nuestrafundacion-blogimg">
               <p>{{ post.titulo }}</p>
               <div class="content__section-nuestrafundacion-blogimg-box">
                 <p><strong>Fecha</strong> {{ post.fecha }}</p>
                 <p>{{ post.contenido }}</p>
-                <p> <a href="{% url 'single_post' post.id %}" target="blank">ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></a></p>
+                <p> <a href="" target="blank">ver mas<img src="{% static 'css/images/icono/flecha_amarilla.svg'%}" alt="logo de flecha"/></a></p>
               </div>
             </div>
-          {% endfor %}
+          
         </div>
       </div>
     </div>
